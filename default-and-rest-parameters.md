@@ -1,0 +1,1 @@
+# Parametry domyślne i resztowe
