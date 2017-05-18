@@ -10,6 +10,7 @@
   * [Pola](classes.md)
   * [Metody](classes.md)
   * [Właściwości get i set](classes.md)
+* [3. Funkcje strzałkowe](arrow-functions.md)
 
 
 
