@@ -74,3 +74,7 @@ console.log(A.b); // -> 20
 
 Jednak pilnowana jest jedynie referencja obiektu przypisanego do stałej. Sprawia to, że możliwe jest modyfikowanie wartość pól obiektu przypisanego do stałej.
 
+#### Źródła
+
+* http://shebang.pl/artykuly/es6-slowa-kluczowe-let-const/
+
