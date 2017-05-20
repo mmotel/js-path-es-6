@@ -66,10 +66,11 @@ const A = {
   b: 10
 };
 console.log(A.b); // -> 10
+
 A.b = 20;
 
 console.log(A.b); // -> 20
 ```
 
-Jednak pilnowana jest jedynie wartość referencji do obiektu przypisanego do stałej. Sprawia to, że możliwe jest modyfikowanie wartość pól obiektu przypisanego do stałej.
+Jednak pilnowana jest jedynie referencja obiektu przypisanego do stałej. Sprawia to, że możliwe jest modyfikowanie wartość pól obiektu przypisanego do stałej.
 
