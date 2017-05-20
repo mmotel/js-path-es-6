@@ -48,7 +48,7 @@ function var () {
 }
 ```
 
-_TIP_: Gdy używasz ES6 zapomnij o `var`, używaj tylko `let`, który działa intuicyjnie.
+_**TIP**: Gdy używasz ES6 zapomnij o `var`, używaj tylko `let`, który działa intuicyjnie._
 
 ## `const`
 
