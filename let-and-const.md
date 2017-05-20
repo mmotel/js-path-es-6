@@ -48,13 +48,28 @@ function var () {
 }
 ```
 
-*TIP*: Gdy używasz ES6 zapomnij o `var`, używaj tylko `let`, który działa intuicyjnie.
+_TIP_: Gdy używasz ES6 zapomnij o `var`, używaj tylko `let`, który działa intuicyjnie.
 
 ## `const`
 
-Słowo kluczowe `const` pozwala definiować stałe. 
+Słowo kluczowe `const` pozwala definiować stałe.
 
 ```js
 const FOO = 'foo';
-FOO = 'bar';
+FOO = 'bar'; // -> error
 ```
+
+Wartość stałej nie może zostać zmodyfikowana.
+
+```js
+const A = {
+  b: 10
+};
+console.log(A.b); // -> 10
+A.b = 20;
+
+console.log(A.b); // -> 20
+```
+
+Jednak pilnowana jest jedynie wartość referencji do obiektu przypisanego do stałej. Sprawia to, że możliwe jest modyfikowanie wartość pól obiektu przypisanego do stałej.
+
