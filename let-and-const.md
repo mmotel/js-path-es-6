@@ -13,7 +13,7 @@ Słowo kluczowe `let` pozwala definiować zmienne podobnie jak `var`.
 
 W przeciwieństwie do `var`, zmienna zdefiniowana przy użyciu `let` ma zasięg blokowy a nie funkcyjny.
 
-#### [Przykład 1.1](http://plnkr.co/edit/fkWrj6THZfqdhwgdazL8)
+##### [Przykład 1.1](http://plnkr.co/edit/fkWrj6THZfqdhwgdazL8)
 ```js
 {
   var a = 10;
@@ -27,7 +27,7 @@ console.log(b); // -> ReferenceError
 
 Powyższy przykład pokazuje różnicę w działaniu `var` i `let`. Zmienne zadeklarowane przy użyciu `var` podlegają hoisting-owi i mają zasięg funkcyjny. Te zadeklarowane przez `let` mają zasięg blokowy a próba ich odczytania przed deklaracją powoduje błąd.
 
-#### [Przykład 1.2](http://plnkr.co/edit/e7ro7q5JKs1K3EfgpdfJ)
+##### [Przykład 1.2](http://plnkr.co/edit/e7ro7q5JKs1K3EfgpdfJ)
 ```js
 function foo () {
   console.log(a); // -> undefined
@@ -50,7 +50,7 @@ function bar () {
 
 Ważną róznicą pomiędzy `var` i `let` jest ich zachowanie gdy używamy ich w pętli `for`. 
 
-#### [Przykład 1.3](http://plnkr.co/edit/qhvTBqPcI9Jph9cHnsGn)
+##### [Przykład 1.3](http://plnkr.co/edit/qhvTBqPcI9Jph9cHnsGn)
 ```js
 for (var i = 0; i < 3; i += 1) {
   setTimeout(function () {
@@ -76,13 +76,15 @@ _**TIP**: Gdy używasz ES6 zapomnij o `var`, używaj tylko `let`, który działa
 
 Słowo kluczowe `const` pozwala definiować stałe.
 
+##### [Przykład 1.4](http://plnkr.co/edit/y2VpTazmZIvNH1T2Lb5P)
 ```js
 const FOO = 'foo';
-FOO = 'bar'; // -> error
+FOO = 'bar'; // -> TypeError
 ```
 
 Wartość stałej nie może zostać zmodyfikowana.
 
+#### [Przykład 1.5](http://plnkr.co/edit/xA3JcHFoV5AON8dVe6cC)
 ```js
 const A = {
   b: 10
