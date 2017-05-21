@@ -1,1 +1,9 @@
 # Destrukturyzacja
+
+## Tablica
+
+## Obiekt
+
+---
+
+###### Źródła
