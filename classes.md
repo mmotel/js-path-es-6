@@ -1,4 +1,4 @@
-# Classes
+# Klasy
 
 ```js
 class Car {

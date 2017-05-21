@@ -1,4 +1,4 @@
-# Arrow functions
+# Funkcje strzałkowe
 
 ```js
 (a) => a * a
@@ -9,3 +9,10 @@
   return a * a;
 }
 ```
+
+---
+
+###### Źródła
+
+* http://shebang.pl/artykuly/es6-funkcje-strzalkowe/
+
