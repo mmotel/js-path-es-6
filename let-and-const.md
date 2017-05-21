@@ -13,21 +13,21 @@ Słowo kluczowe `let` pozwala definiować zmienne podobnie jak `var`.
 
 W przeciwieństwie do `var`, zmienna zdefiniowana przy użyciu `let` ma zasięg blokowy a nie funkcyjny.
 
+#### [Przykład 1.1](http://plnkr.co/edit/fkWrj6THZfqdhwgdazL8)
 ```js
-function foo () {
-  {
-    var a = 10;
-  }
-  {
-    let b = 20;
-  }
-  console.log(a); // -> 10
-  console.log(b); // -> error
+{
+  var a = 10;
 }
+{
+  let b = 20;
+}
+console.log(a); // -> 10
+console.log(b); // -> ReferenceError
 ```
 
-Powyższy przykład pokazuje różnicę w działaniu `var` i `let`. Zmienne zadeklarowane przy użyciu `var` podlegają hoisting-owi i mają zasięg funkcyjny. Te zadeklarowane przez `let` mają zasięg blokowy i są deklarowane dokładnie w miejscu ich wystąpienia.
+Powyższy przykład pokazuje różnicę w działaniu `var` i `let`. Zmienne zadeklarowane przy użyciu `var` podlegają hoisting-owi i mają zasięg funkcyjny. Te zadeklarowane przez `let` mają zasięg blokowy a próba ich odczytania przed deklaracją powoduje błąd.
 
+#### [Przykład 1.2](http://plnkr.co/edit/e7ro7q5JKs1K3EfgpdfJ)
 ```js
 function foo () {
   console.log(a); // -> undefined
@@ -37,16 +37,38 @@ function foo () {
   console.log(a); // -> 10
 }
 
-function var () {
-  console.log(b); // -> error
+function bar () {
+  console.log(b); // -> ReferenceError
   {
-    console.log(b); // -> error
+    console.log(b); // -> ReferenceError
     let b = 20;
     console.log(b); // -> 20
   }
-  console.log(b); // -> error
+  console.log(b); // -> ReferenceError
 }
 ```
+
+Ważną róznicą pomiędzy `var` i `let` jest ich zachowanie gdy używamy ich w pętli `for`. 
+
+#### [Przykład 1.3](http://plnkr.co/edit/qhvTBqPcI9Jph9cHnsGn)
+```js
+for (var i = 0; i < 3; i += 1) {
+  setTimeout(function () {
+    console.log(i);
+  }, i * 5);
+}
+// -> 3 / 3 / 3
+
+for (let i = 0; i < 3; i += 1) {
+  setTimeout(function () {
+    console.log(i);
+  }, i * 5);
+}
+
+// -> 0 / 1 / 2
+```
+
+W każdym obrocie pętli otrzymujemy nową kopię zmiennej zadeklarowanej przy użyciu `let`. 
 
 _**TIP**: Gdy używasz ES6 zapomnij o `var`, używaj tylko `let`, który działa intuicyjnie._
 
