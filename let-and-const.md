@@ -84,7 +84,7 @@ FOO = 'bar'; // -> TypeError
 
 Wartość stałej nie może zostać zmodyfikowana.
 
-#### [Przykład 1.5](http://plnkr.co/edit/xA3JcHFoV5AON8dVe6cC)
+##### [Przykład 1.5](http://plnkr.co/edit/xA3JcHFoV5AON8dVe6cC)
 ```js
 const A = {
   b: 10
