@@ -7,7 +7,6 @@
 * [4. Parametry domyślne i resztowe](default-and-rest-parameters.md)
 * [5. Destrukturyzacja](destructurization.md)
 * [6. Łańcuchy szablonowe](template-strings.md)
-* [6. Parametry domyślne i resztowe](default-and-rest-parameters.md)
 * [7. Symbole](symbols.md)
 * [8. Iteratory i pętla `for-of`](iterators-and-for-of.md)
 * [9. Generatory](generators.md)
