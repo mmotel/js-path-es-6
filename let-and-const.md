@@ -70,7 +70,7 @@ for (let i = 0; i < 3; i += 1) {
 // -> 0 / 1 / 2
 ```
 
-W każdym obrocie pętli otrzymujemy nową kopię zmiennej zadeklarowanej przy użyciu `let`. 
+Dzięki zasięgowi blokowemu, w każdym obrocie pętli otrzymujemy nową kopię zmiennej zadeklarowanej przy użyciu `let`. 
 
 _**TIP**: Gdy używasz ES6 zapomnij o `var`, używaj tylko `let`, który działa intuicyjnie._
 
@@ -78,7 +78,7 @@ _**TIP**: Gdy używasz ES6 zapomnij o `var`, używaj tylko `let`, który działa
 
 ## `const`
 
-Słowo kluczowe `const` pozwala definiować stałe.
+Słowo kluczowe `const` pozwala definiować stałe. Działa dokładnie tak jak `let` ale wartość stałej nie może zostać zmodyfikowana.
 
 ##### [Przykład 1.4](http://plnkr.co/edit/y2VpTazmZIvNH1T2Lb5P)
 ```js
@@ -86,7 +86,7 @@ const FOO = 'foo';
 FOO = 'bar'; // -> TypeError
 ```
 
-Wartość stałej nie może zostać zmodyfikowana.
+Jednak pilnowana jest jedynie referencja obiektu przypisanego do stałej. Sprawia to, że możliwe jest modyfikowanie wartości jego pól.
 
 ##### [Przykład 1.5](http://plnkr.co/edit/xA3JcHFoV5AON8dVe6cC)
 ```js
@@ -99,8 +99,6 @@ A.b = 20;
 
 console.log(A.b); // -> 20
 ```
-
-Jednak pilnowana jest jedynie referencja obiektu przypisanego do stałej. Sprawia to, że możliwe jest modyfikowanie wartość pól obiektu przypisanego do stałej.
 
 ---
 
