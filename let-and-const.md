@@ -2,6 +2,8 @@
 
 ES6 wprowadza dwa nowe słowa kluczowe `let` i `const`, które służą do deklarowania zmiennych oraz stałych.
 
+---
+
 ## `let`
 
 Słowo kluczowe `let` pozwala definiować zmienne podobnie jak `var`.
@@ -71,6 +73,8 @@ for (let i = 0; i < 3; i += 1) {
 W każdym obrocie pętli otrzymujemy nową kopię zmiennej zadeklarowanej przy użyciu `let`. 
 
 _**TIP**: Gdy używasz ES6 zapomnij o `var`, używaj tylko `let`, który działa intuicyjnie._
+
+--- 
 
 ## `const`
 
