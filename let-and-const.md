@@ -2,7 +2,6 @@
 
 ES6 wprowadza dwa nowe słowa kluczowe `let` i `const`, które służą do deklarowania zmiennych oraz stałych.
 
----
 
 ## `let`
 
@@ -74,7 +73,6 @@ Dzięki zasięgowi blokowemu, w każdym obrocie pętli otrzymujemy nową kopię 
 
 _**TIP**: Gdy używasz ES6 zapomnij o `var`, używaj tylko `let`, który działa intuicyjnie._
 
---- 
 
 ## `const`
 
@@ -102,7 +100,7 @@ console.log(A.b); // -> 20
 
 ---
 
-#### Źródła
+###### Źródła
 
 * http://shebang.pl/artykuly/es6-slowa-kluczowe-let-const/
 
