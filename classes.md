@@ -14,3 +14,15 @@ class Car {
   
 }
 ```
+
+## Konstruktor
+
+## Metody
+
+## Właściwości `set` i `get`
+
+## Dziedziczenie
+
+---
+
+###### Źródła
