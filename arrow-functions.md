@@ -20,7 +20,7 @@ let square2 = (a) => a * a;
 
 ```js
 (a) => {
-return a * a;
+  return a * a;
 }
 ```
 
