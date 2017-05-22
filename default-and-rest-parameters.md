@@ -3,11 +3,19 @@
 ## Parametry domyślne
 
 ```js
-function square (a=0) {
+function square (a) {
+    if (!a) {
+        a = 0;
+    }
     return a * a;
 }
 ```
 
+```js
+function square (a=0) {
+    return a * a;
+}
+```
 
 ```js
 class Foo {
