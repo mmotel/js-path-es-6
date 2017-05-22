@@ -85,3 +85,6 @@ class Bar extends Foo {
 ---
 
 ###### Źródła
+
+* http://shebang.pl/artykuly/es6-bez-tajemnic-klasy/
+* http://shebang.pl/artykuly/es6-bez-tajemnic-podklasy/

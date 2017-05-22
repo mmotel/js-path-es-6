@@ -48,3 +48,5 @@ function bar ({first=1, second=2, third=3}) {}
 ---
 
 ###### Źródła
+
+* http://shebang.pl/artykuly/destrukturyzacja/
