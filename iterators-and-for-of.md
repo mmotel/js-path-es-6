@@ -133,26 +133,32 @@ for (let n of randomRange(10)) {
 class Words {
     constructor(str) {
         this._str = str;
+
+        this[Symbol.iterator] = () => {
+            const re = /\S+/g,
+                str = this._str;
+
+            return {
+                next: () => {
+                    const match = re.exec(str);
+                    return match ? { value: match[0], done: false } : { value: undefined, done: true }
+                }
+            }
+        }
     }
 }
 
-Words.prototype[Symbol.iterator] = function () {
-    const re = /\S+/g,
-        str = this._str;
-
-    return {
-        next: () => {
-            const match = re.exec(str);
-            return match ? { value: match[0], done: false } : { value: undefined, done: true }
-        }
-    }
-};
 
 const lipsum = new Words("Kopczyński i podług biegu rzeczy niemożemy miary szczęśliwości lub czynnym, lecz i jako przyboczny wynik, gdy pierwej był w pojecie o tym świecie.");
 
 for (let word of lipsum) {
     console.log(word);
 }
+
+```
+
+```
+
 ```
 
 
