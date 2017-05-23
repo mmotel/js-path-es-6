@@ -177,5 +177,13 @@ let sampleCollection = [
 ];
 ```
 
+---
+
+**Źródła**
+
+* [https://medium.com/ecmascript-2015/es6-iterators-4afec026f70a](https://medium.com/ecmascript-2015/es6-iterators-4afec026f70a)
+* [http://shebang.pl/artykuly/es6-bez-tajemnic-iteratory-i-petla-for-of/](http://shebang.pl/artykuly/es6-bez-tajemnic-iteratory-i-petla-for-of/)
+* [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration\_protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+
 
 

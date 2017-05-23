@@ -1,6 +1,5 @@
 # Funkcje strzałkowe
 
-
 ```js
 function square (a) {
   return a * a;
@@ -8,7 +7,6 @@ function square (a) {
 
 let square2 = (a) => a * a;
 ```
-
 
 ## Domyślnym return
 
@@ -42,5 +40,7 @@ class Foo {
 
 ###### Źródła
 
-* http://shebang.pl/artykuly/es6-funkcje-strzalkowe/
+* [http://shebang.pl/artykuly/es6-funkcje-strzalkowe/](http://shebang.pl/artykuly/es6-funkcje-strzalkowe/)
+
+
 
