@@ -154,11 +154,27 @@ const lipsum = new Words("Kopczyński i podług biegu rzeczy niemożemy miary sz
 for (let word of lipsum) {
     console.log(word);
 }
-
 ```
 
-```
+### Ćwiczenie
 
+Zaimplementować klasę `OverNameIterate()`   w konstruktorze przyjmującą kolekcję  obiektów. Klasa musi implementować iterator, pozwalający na wypisywanie z kolejnych obiektów własności `name`.
+
+```js
+let sampleCollection = [
+    {"name": "Calvin", "surname": "Castillo", "email": "nibh.vulputate@velnislQuisque.edu", "city": "Landeck"},
+    {"name": "Oren", "surname": "Austin", "email": "semper@hendreritidante.co.uk", "city": "Morrovalle"},
+    {"name": "Buckminster", "surname": "Johnston", "email": "sed.hendrerit.a@eudoloregestas.net", "city": "Olen"},
+    {"name": "Byron", "surname": "Cooke", "email": "Ut@Integersemelit.co.uk", "city": "Habergy"},
+    {"name": "Ciaran", "surname": "Alford", "email": "Vivamus.molestie@Nuncsollicitudincommodo.co.uk", "city": "Bussolengo"},
+    {"name": "Cedric", "surname": "Battle", "email": "tincidunt@ligulatortor.edu", "city": "Kelkheim"},
+    {"name": "Alec", "surname": "Rasmussen", "email": "taciti.sociosqu@utlacus.co.uk", "city": "Colleretto Castelnuovo"},
+    {"name": "Fuller", "surname": "Hooper", "email": "Nam.porttitor@tempuseuligula.com", "city": "Izel"},
+    {"name": "Brett", "surname": "Fox", "email": "venenatis@tempor.ca", "city": "Castello Tesino"},
+    {"name": "Armand", "surname": "Nicholson", "email": "magna.Nam@blanditcongue.ca", "city": "Bournemouth"},
+    {"name": "Kennan", "surname": "Blair", "email": "eleifend.vitae@sedduiFusce.net", "city": "Paranaguá"},
+    {"name": "Jack", "surname": "Lowe", "email": "erat.vitae@Nunc.ca", "city": "Roveredo in Piano"}
+];
 ```
 
 
