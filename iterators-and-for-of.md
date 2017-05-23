@@ -73,11 +73,7 @@ for (var i of paragraphs) {
 >
 > Podobnie jak dodanie mójObiekt.toString\(\) do jakiegokolwiek obiektu sprawia, że JS od razu wie jak konwertować dany obiekt na łańcuch znaków, dodanie metody [**mójObiekt\[Symbol.iterator\]\(**](/symbols.md)**\)** do **dowolnego obiektu** sprawi, że JS bez problemu wykona na nim pętlę.
 
-
-
 Obiekty z metodą \[Symbol.iterator\]\(\) nazywamy obiektami iterowalnymi.  Stwórzmy najprostszy możliwy iterator \(obiekt, który zawiera jedynie metodę iteratora\).
-
-
 
 ```js
 var timestampForeverIterator = {
@@ -94,25 +90,17 @@ for (value of timestampForeverIterator) {
 }
 ```
 
-
-
 Funkcja iteratora musi zwracać obiekt zawierający metodę  **next.** Metoda next zaś musi zwracać obiekt informujący czy iteracja dobiegła już końca `done` oraz, że kolejną wartością  `value`  jest timestamp \(Date.now\(\)\).
-
-
 
 > Funkcjonowanie takiego iteratora, mającego własności .done i .value, różni się od iteratorów w innych językach. W Javie iteratory mają osobne metody `.hasNext()` i .`next()`. W Pythonie natomiast istnieje pojedyncza metoda `.next()`, która zgłasza wyjątek StopIteration po wyczerpaniu się wszystkich wartości. We wszystkich trzech przypadkach zwracane są jednak właściwie te same informacje.
 
-
-
-Obiekt iteratora może również implementować opcjonalne metody .return\(\) i .throw\(wyjątek\) . Pętla for–of wywoła metodę .return\(\), jeśli do zakończenia pętli doszło przedwcześnie w wyniku wyjątku lub instrukcji break bądź return. Iterator może implementować metodę .return\(\), jeśli potrzebne jest zwolnienie wykorzystywanych wcześniej zasobów. 
+Obiekt iteratora może również implementować opcjonalne metody .return\(\) i .throw\(wyjątek\) . Pętla for–of wywoła metodę .return\(\), jeśli do zakończenia pętli doszło przedwcześnie w wyniku wyjątku lub instrukcji break bądź return. Iterator może implementować metodę .return\(\), jeśli potrzebne jest zwolnienie wykorzystywanych wcześniej zasobów.
 
 ### Potencjalne zastosowania iteratorów:
 
 1. [genrowanie](/generators.md)\(!\) danych
 2. ukrywanie implementacji
 3. iterowanie po wybranych właściwościach obiektu
-
-
 
 ```js
 const randomRange = (items = 1, from = 0, to = 10) => ({
@@ -138,6 +126,32 @@ const randomRange = (items = 1, from = 0, to = 10) => ({
 
 for (let n of randomRange(10)) {
     console.log(n);
+}
+```
+
+```js
+class Words {
+    constructor(str) {
+        this._str = str;
+    }
+}
+
+Words.prototype[Symbol.iterator] = function () {
+    const re = /\S+/g,
+        str = this._str;
+
+    return {
+        next: () => {
+            const match = re.exec(str);
+            return match ? { value: match[0], done: false } : { value: undefined, done: true }
+        }
+    }
+};
+
+const lipsum = new Words("Kopczyński i podług biegu rzeczy niemożemy miary szczęśliwości lub czynnym, lecz i jako przyboczny wynik, gdy pierwej był w pojecie o tym świecie.");
+
+for (let word of lipsum) {
+    console.log(word);
 }
 ```
 
