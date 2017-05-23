@@ -6,7 +6,7 @@
 ```js
 function square (a) {
     a = a ? a : 0;
-    
+
     return a * a;
 }
 ```
@@ -33,11 +33,11 @@ class Foo {
 function concatAll (array1, array2) {
   let result = array1.concat(array2);
   let restArrays = Array.prototype.splice.call(arguments, 2);
-  
+
   restArrays.forEach( (anotherArray) => {
     result = result.concat(anotherArray);
   });
-  
+
   return result;
 }
 
@@ -49,11 +49,11 @@ console.log(allArrays); // -> [1, 2, 3, 4, 5, 6, 7, 8]
 ```js
 function concatAll2 (array1, array2, ...arrays) {
   let result = array1.concat(array2);
-  
+
   arrays.forEach( (anotherArray) => { 
     result = result.concat(anotherArray); 
   });
-  
+
   return result;
 }
 
@@ -65,4 +65,7 @@ console.log(allArrays2);// -> [1, 2, 3, 4, 5, 6, 7, 8]
 
 ##### Źródła
 
-* http://shebang.pl/artykuly/es6-bez-tajemnic-parametry-resztowe-domyslne/
+* [http://shebang.pl/artykuly/es6-bez-tajemnic-parametry-resztowe-domyslne/](http://shebang.pl/artykuly/es6-bez-tajemnic-parametry-resztowe-domyslne/)
+
+
+
