@@ -3,3 +3,7 @@ img[src="assets/LOGO_SOLWIT.png"] {
     margin: 0 auto;
     display: block;
 }
+
+h1#js-path-ecmascript-6 {
+    text-align: center;
+}
