@@ -1,6 +1,6 @@
 # JS Path: EcmaScript 6
 
-##### ![](/assets/LOGO SOLWIT TRANSPARENTNE.png)
+##### ![](/assets/LOGO_SOLWIT.png)
 
 ## Czym jest EcmaScript?
 
