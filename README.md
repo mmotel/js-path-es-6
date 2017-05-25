@@ -1,4 +1,4 @@
-# JS Path: EcmaScript 6
+# JS Path: ECMAScript 6
 
 ##### ![](/assets/LOGO_SOLWIT.png)
 
@@ -11,9 +11,9 @@ let about = {
 };
 ```
 
-## Czym jest EcmaScript?
+## Czym jest ECMAScript?
 
-## EcmaScript 6
+## ECMAScript 6
 
 
 
