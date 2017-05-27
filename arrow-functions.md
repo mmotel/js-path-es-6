@@ -1,20 +1,30 @@
 # Funkcje strzałkowe
 
+Funkcja strzałkowa - _strzałka_ - jest nowym sposobem na definiowanie wyrażeń funkcyjnych.
+
 ```js
 function square (a) {
   return a * a;
 }
 
-let square2 = (a) => a * a;
+let square2 = a => a * a;
 ```
 
-## Domyślnym return
+Nowa notacja pozwala na pominięcie słów kluczowych `function` i `return` oraz klamry. _Strzałki_ domyślnie zwracają to co znajduje się za `=>`.
+
+### Parametry
+
+Jeżeli chcemy aby nasza _strzałka_ miała więcej niż jeden lub zero parametrów musimy użyć nawiasów.
 
 ```js
-(a) => a * a
+() => 10
+
+(a, b) => a * b
 ```
 
-## Ciało funkcji
+### Ciało funkcji
+
+Jednak nie zawsze chcemy lub możemy wykonać wszystko w jednym wyrażeniu. Je
 
 ```js
 (a) => {
@@ -22,7 +32,7 @@ let square2 = (a) => a * a;
 }
 ```
 
-## `this`
+### `this`
 
 ```js
 class Foo {
