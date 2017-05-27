@@ -24,13 +24,15 @@ Jeżeli chcemy aby nasza _strzałka_ miała więcej niż jeden lub zero parametr
 
 ### Ciało funkcji
 
-Jednak nie zawsze chcemy lub możemy wykonać wszystko w jednym wyrażeniu. Je
+Jednak nie zawsze chcemy lub możemy wykonać wszystko w jednym wyrażeniu. Aby zdefiniować ciało _strzałki_ używamy nawiasy klamrowe.
 
 ```js
 (a) => {
   return a * a;
 }
 ```
+
+Jeśli zdefiniujemy ciało _strzałki_ nie zwraca już ona domyślnie swojej wartości - musimy użyć jawnie słowa kluczowego `return`.
 
 ### `this`
 
