@@ -59,6 +59,14 @@ class Foo {
 
 Jednak pola z kluczami będącymi symbolami nie są pomijane przez wszystkie dostępne narzędzia do inspekcji obiektów. Nowe interfejsy API pozwala na ich pobranie - `Object.getOwnPropertySymbols`,  `Reflect.ownKeys`.
 
+## Sposoby uzyskania symbolu
+
+* metoda `Symbol()` - zwraca za każdym razem unikalny symbol,
+
+* metoda `Symbol.for(string)` - zwraca symbol z tzw. _rejestru symboli_, każde wywołanie `Symbol.for('name')` zwróci dokładnie ten sam współdzielony symbol dla opisu `name`,
+
+* symbole zdefiniowane w standardzie, np. `Symbol.iterator`.
+
 ---
 
 ###### Źródła
