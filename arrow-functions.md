@@ -91,6 +91,3 @@ Funkcja strzałkowa _dziedziczy_ `this` z zewnętrzego zakresu dzięki czemu mog
 ###### Źródła
 
 * [http://shebang.pl/artykuly/es6-funkcje-strzalkowe/](http://shebang.pl/artykuly/es6-funkcje-strzalkowe/)
-
-
-
