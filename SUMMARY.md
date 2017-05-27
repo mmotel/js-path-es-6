@@ -6,7 +6,6 @@
 * [2. Klasy](classes.md)
 * [3. Parametry domyślne i resztowe](default-and-rest-parameters.md)
 * [4. Funkcje strzałkowe](arrow-functions.md)
-* [3. Parametry domyślne i resztowe](default-and-rest-parameters.md)
 * [5. Destrukturyzacja](destructurization.md)
 * [6. Łańcuchy szablonowe](template-strings.md)
 * [7. Symbole](symbols.md)
