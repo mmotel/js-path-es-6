@@ -16,7 +16,7 @@ Nowa notacja pozwala na pominięcie słów kluczowych `function` i `return` oraz
 
 ### Parametry
 
-Jeżeli chcemy aby nasza _strzałka_ miała więcej niż jeden lub zero parametrów musimy użyć nawiasów.
+Jeżeli chcemy aby nasza _strzałka_ nie miała parametrów lub miała ich więcej niż jeden musimy użyć nawiasów.
 
 ##### Przykład 4.2
 
@@ -83,7 +83,7 @@ Funkcja strzałkowa _dziedziczy_ `this` z zewnętrzego zakresu dzięki czemu mog
 
 **_TIP_**:
 
-* Z funkcji _niestrzałkowych_ należy korzystać w przypadku metod wywoływanych poprzez składnię `obiekt.metoda()`. Funkcje te otrzymają sensowną wartość `this` od wywołującego je obiektu.
+> * Z funkcji _niestrzałkowych_ należy korzystać w przypadku metod wywoływanych poprzez składnię `obiekt.metoda()`. Funkcje te otrzymają sensowną wartość `this` od wywołującego je obiektu.
 * Funkcji strzałkowych należy używać w pozostałych przypadkach.
 
 ---
