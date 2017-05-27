@@ -71,7 +71,7 @@ for (let i = 0; i < 3; i += 1) {
 
 Dzięki zasięgowi blokowemu, w każdym obrocie pętli otrzymujemy nową kopię zmiennej zadeklarowanej przy użyciu `let`. 
 
-_**TIP**: Gdy używasz ES6 zapomnij o `var`, używaj tylko `let`, który działa intuicyjnie._
+_**TIP**_: Gdy używasz ES6 zapomnij o `var`, używaj tylko `let`, który działa intuicyjnie dzięki zakresowi blokowem.
 
 
 ## `const`

@@ -3,6 +3,7 @@
 Funkcja strzałkowa - _strzałka_ - jest nowym sposobem na definiowanie wyrażeń funkcyjnych.
 
 ##### Przykład 4.1
+
 ```js
 function square (a) {
   return a * a;
@@ -18,6 +19,7 @@ Nowa notacja pozwala na pominięcie słów kluczowych `function` i `return` oraz
 Jeżeli chcemy aby nasza _strzałka_ miała więcej niż jeden lub zero parametrów musimy użyć nawiasów.
 
 ##### Przykład 4.2
+
 ```js
 () => 10
 
@@ -31,6 +33,7 @@ W przypadku funkcji strzałkowych nie możemy skorzystać z `arguments` ale w ES
 Jednak nie zawsze chcemy lub możemy wykonać wszystko w jednym wyrażeniu. Aby zdefiniować ciało _strzałki_ używamy nawiasy klamrowe.
 
 ##### Przykład 4.3
+
 ```js
 (a) => {
   return a * a;
@@ -44,6 +47,26 @@ Jeśli zdefiniujemy ciało _strzałki_ nie zwraca już ona domyślnie swojej war
 Subtelną ale bardzo ważną rożnicą pomiędzy zwykłą funkcją a _strzałką_ jest wiązanie wartości `this`.
 
 ##### Przykład 4.4
+
+```js
+class Foo {
+  constructor (data) {
+    this.data = data;
+  }
+
+  update (data) {
+    let self = this;
+    setTimeout(function () { self.data = data; }, 50);
+  }
+}
+```
+
+W powyższym przykładzie wewnątrz `function` wartość `this` będzie równa `undefined` lub `window` przez co musieliśmy zasotoswać `self pattern` aby móc uzyskać dostęp do własciwego `this` - instancji klasy `Foo`.
+
+Rozwiązaniem jest zasotoswanie funkcji strzałkowej.
+
+##### Przykład 4.5
+
 ```js
 class Foo {
   constructor (data) {
@@ -55,6 +78,13 @@ class Foo {
   }
 }
 ```
+
+Funkcja strzałkowa _dziedziczy_ `this` z zewnętrzego zakresu dzięki czemu mogliśmy bezpośrednio odwołać się do instancji klasy `Foo` przez `this`.
+
+**_TIP_**:
+
+* Z funkcji _niestrzałkowych_ należy korzystać w przypadku metod wywoływanych poprzez składnię `obiekt.metoda()`. Funkcje te otrzymają sensowną wartość `this` od wywołującego je obiektu.
+* Funkcji strzałkowych należy używać w pozostałych przypadkach.
 
 ---
 
