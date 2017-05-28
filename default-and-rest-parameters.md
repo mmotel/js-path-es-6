@@ -2,14 +2,20 @@
 
 ## Parametry domyślne
 
+Zdarza się, że podawanie wszystkich parametrów funkcji nie jest konieczne. Wtedy musimy ustalić ich domyślną wartość.
+
+Dotychczas musieliśmy radzić sobie z wartościami domyślnymi _ręcznie_ w ciele funkcji.
+
 ##### Przykład 4.1
 ```js
 function square (a) {
-    a = a ? a : 0;
+    a = a !== undefined ? a : 0;
 
     return a * a;
 }
 ```
+
+ES6 pozwala na ustalenie wartości domyślnej parametru w momencie jego deklaracji.
 
 ```js
 function square2 (a=0) {
@@ -17,11 +23,13 @@ function square2 (a=0) {
 }
 ```
 
+Ważną cechą parametrów domyślnych jest moment ich ewaluacji. W przeciwieństwie do języków takich ja `Pyhton`, ich wartość jest ustalana w momencie wykonywania funkcji, a nie w momencie jej definiowania.
+
 ##### Przykład 4.2
 ```js
 class Foo {
-    greet (bar='bar') {
-        return 'Hello ' + bar;
+    today (now=new Date()) {
+        return 'Today is ' + now;
     }
 }
 ```
