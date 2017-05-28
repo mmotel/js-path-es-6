@@ -77,8 +77,7 @@ Jak widać implementacja krótsza i sprowadza się jedynie do określenia tego c
 
 * podobnie jak iterator, zwraca obiekt z wartościami  `done`oraz `value`.  `next()` pozwala także na przekazanie wartości do generatora.
 
-**Generator.prototype.return\(\)  
-** - pozwala na zatrzymanie działania iteratora, z opcjonalnie przekazaną wartością.
+**Generator.prototype.return\(\)  ** - pozwala na zatrzymanie działania iteratora, z opcjonalnie przekazaną wartością.
 
 ```js
 function* sampleGenerator() {
@@ -95,13 +94,13 @@ console.log(gen.next()); // Object {value: undefined, done: true}
 console.log(gen.next()); // Object {value: undefined, done: true}
 ```
 
-**Generator.prototype.throw\(\)** -
+**Generator.prototype.throw\(\)** - 
 
+### Ćwiczenie
 
+Przepisać klasę Words z poprzedniego rozdziału. Zamiast implementacji iteratora, użyć generatora.
 
-
-
-//TODO  ćwiczenie - przepisać Words na generator
+---
 
 **Źródła:**
 
