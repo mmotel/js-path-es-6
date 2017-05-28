@@ -13,12 +13,16 @@ let tempalte2 = `
 `;
 ```
 
+Kolejną nową cechą łańcuchów szablonowych jest możliwość skorzystania z _interpolacji łańcuchów_. Pozwala to na wstawianie wartości JavaScript do łańcuchów.
+
 ##### Przykład 6.2
 ```js
 function greet (name, city, age) {
     return `Hello, I am ${name} from ${city} and ${age} year old.`;
 }
 ```
+
+Używając składni `${}` możemy wstawić do łańcucha dowolną wartość JavaScript, również wywołanie funkcji czy też kolejny łańcuch szablonowy. Wartości JavaScript umieszczone wewnątrz znaczników `${}` są automatycznie rzutowane na łańcuch.
 
 ---
 
