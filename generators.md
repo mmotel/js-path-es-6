@@ -73,9 +73,12 @@ Jak widać implementacja krótsza i sprowadza się jedynie do określenia tego c
 
 ### Sterowanie generatorem
 
-[**Generator.prototype.next\(\)**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/next) -   podobnie jak iterator, zwraca obiekt z wartościami  `done `oraz `value`.  `next()` pozwala także na przekazanie wartości do generatora.
+[**Generator.prototype.next\(\)**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/next)
 
-**Generator.prototype.return\(\)** - pozwala na zatrzymanie działania iteratora, z opcjonalnie przekazaną wartością.
+* podobnie jak iterator, zwraca obiekt z wartościami  `done`oraz `value`.  `next()` pozwala także na przekazanie wartości do generatora.
+
+**Generator.prototype.return\(\)  
+** - pozwala na zatrzymanie działania iteratora, z opcjonalnie przekazaną wartością.
 
 ```js
 function* sampleGenerator() {
@@ -92,7 +95,9 @@ console.log(gen.next()); // Object {value: undefined, done: true}
 console.log(gen.next()); // Object {value: undefined, done: true}
 ```
 
-**Generator.prototype.throw\(\)** - 
+**Generator.prototype.throw\(\)** -
+
+
 
 
 
