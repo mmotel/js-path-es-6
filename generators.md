@@ -77,7 +77,7 @@ Jak widać implementacja krótsza i sprowadza się jedynie do określenia tego c
 
 * podobnie jak iterator, zwraca obiekt z wartościami  `done`oraz `value`.  `next()` pozwala także na przekazanie wartości do generatora.
 
-**Generator.prototype.return\(\)  ** - pozwala na zatrzymanie działania iteratora, z opcjonalnie przekazaną wartością.
+**Generator.prototype.return\(\)  ** - pozwala na zatrzymanie działania generatora, z opcjonalnie przekazaną wartością.
 
 ```js
 function* sampleGenerator() {
@@ -94,7 +94,29 @@ console.log(gen.next()); // Object {value: undefined, done: true}
 console.log(gen.next()); // Object {value: undefined, done: true}
 ```
 
-**Generator.prototype.throw\(\)** - 
+**Generator.prototype.throw\(\)** - pozwala na zatrzymanie działania generatora poprzez rzucenie wyjątku.
+
+```js
+function* sampleGenerator() {
+    try {
+        yield 1;
+        yield 2;
+        yield 3;
+    } catch (e) {
+        console.log('Ooops! ', e.message);
+    }
+    yield 4;
+    yield 5;
+}
+
+let gen = sampleGenerator(); // [object Generator]
+console.log(gen.next()); // Object {value: 1, done: false}
+console.log(gen.next()); // Object {value: 2, done: false}
+console.log(gen.throw(new Error('SolwIT'))); // Ooops!  SolwIT, Object {value: 4, done: false}
+console.log(gen.next()); // Object {value: 5, done: false}
+console.log(gen.next()); // Object {value: undefined, done: true}
+
+```
 
 ### Ćwiczenie
 
