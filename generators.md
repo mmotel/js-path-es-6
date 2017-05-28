@@ -1,6 +1,6 @@
 # Generatory
 
-Generatory są [iteratorami](/iterators-and-for-of.md). Wszystkie generatory mają wbudowaną implementację metod `.next()` i `[Symbol.iterator]()` 
+Generatory są [iteratorami](/iterators-and-for-of.md). Wszystkie generatory mają wbudowaną implementację metod `.next()` i `[Symbol.iterator]()`
 
 ## Przykładowy generator
 
@@ -16,8 +16,6 @@ function* sampleGenerator() {
 
 * **function\*** - specjalny rodzaj funkcji, która zwraca instancję generatora.
 * **yield** - wewnątrz generatora yield jest słowem kluczowym o składni podobnej do instrukcji return. Różnica polega na tym, że instrukcja return może być użyta wewnątrz funkcji \(nawet generatora\) tylko raz. W przypadku instrukcji yield takich ograniczeń nie ma. Wyrażenie yield **powoduje wstrzymanie wykonywania generatora**, co umożliwia późniejsze wznowienie jego działania.
-
-
 
 _**Kluczową różnicą pomiędzy zwykłymi funkcjami a generatorami jest to, że  wstrzymanie funkcji nie jest możliwe. Generatory natomiast wstrzymać można.**_
 
@@ -47,29 +45,45 @@ console.log(val);
 
 Samo wywołanie generatora wygląda identycznie jak wywołanie funkcji : `sampleGenerator()`.  Generator nie rozpoczyna jednak działania od razu. Na początek zwracany jest wstrzymany obiekt generatora - gen – można go porównać do wstrzymanego wywołania funkcji. Do wstrzymania tego dochodzi zaraz na początku generatora, tuż przed wykonaniem pierwszej linijki kodu.
 
-Po każdym wywołaniu metody obiektu generatora `.next()` funkcja zostaje wznowiona i jest wykonywana aż do kolejnej instrukcji yield.
+Po każdym wywołaniu metody obiektu generatora `.next()` funkcja zostaje wznowiona i jest wykonywana aż do kolejnej instrukcji yield.
 
-Po ostatnim wywołaniu metody `gen.next()` generator dobiega końca, dlatego w polu .done zwracanego obiektu mamy wartość true. Zakończenie wywoływania funkcji oznacza praktycznie zwrócenie wartości undefined, stąd też wartość ta pojawia się w polu `value`.
+Po ostatnim wywołaniu metody `gen.next()` generator dobiega końca, dlatego w polu .done zwracanego obiektu mamy wartość true. Zakończenie wywoływania funkcji oznacza praktycznie zwrócenie wartości undefined, stąd też wartość ta pojawia się w polu `value`.
 
 ### Istotne!
 
 > Za każdym razem, gdy generator wykonuje instrukcję yield jego ramka stosu – zmienne lokalne, argumenty, wartości tymczasowe oraz informacja na temat aktualnego miejsca wykonania w kodzie generatora – zostaje usunięta ze stosu. Obiekt generatora przechowuje jednak odniesienie do ramki \(bądź jego kopię\), dzięki czemu kolejne wywołanie metody .next\(\) może ją reaktywować i kontynuować wykonywanie funkcji.
 
+## Generatory są iteratorami
+
+Powtórzmy jeszcze raz: Generatory są [iteratorami](/iterators-and-for-of.md). Wszystkie generatory mają wbudowaną implementację metod `.next()` i `[Symbol.iterator]()`.  Programista musi tylko napisać kod realizujący działanie pętli.  Zaimplementujmy zatem generator `randomRange()` zwracający losowe liczby z określonego zakresu \(analogicznie do [iteratora z poprzedniego rozdziału](/iterators-and-for-of.md)\)
+
+```js
+function* randomRange(items = 1, from = 0, to = 10) {
+    for (let i = 0; i < items; i++) {
+        yield from + Math.floor(Math.random() * to) + 1;
+    }
+}
+
+for (let n of randomRange(10)) {
+    console.log(n);
+} 
+```
 
 
-Inne przykłady
 
-//TODO range, randomRange  z iteratorów
+Jak widać implementacja krótsza i sprowadza się jedynie do określenia tego co ma być generowane. Nie trzeba implementować metod iteratora.
+
+### Sterowanie generatorem
+
+Można zadać pytanie, jak przerwać pracę iteratora, ewentualnie co stanie się w przypadku wystąpienia błędu, lub co ciekawe, co stanie się  gdy użyjemy  instrukcji `return `zamiast `yield`? 
+
+
+
+
+
+
 
 //TODO  ćwiczenie - przepisać Words na generator
-
-//TODO  .throw\(\) i .return\(\)  ,generatory zwracajace generatory
-
-TODO Zastosowanie
-
-
-
-
 
 **Źródła:**
 
