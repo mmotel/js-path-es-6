@@ -115,6 +115,12 @@ console.log(gen.throw(new Error('SolwIT'))); // Ooops!  SolwIT, Object {value: u
 console.log(gen.next()); // Object {value: undefined, done: true}
 ```
 
+### Potencjalne zastosowanie genratorów
+
+* tworzenie kosztownych danych
+* ukrywanie implementacji
+* generowanie danych niestandardowych rozmiarów
+
 ### Ćwiczenie
 
 Przepisać klasę Words z poprzedniego rozdziału. Zamiast implementacji iteratora, użyć generatora.
