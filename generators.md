@@ -66,20 +66,33 @@ function* randomRange(items = 1, from = 0, to = 10) {
 
 for (let n of randomRange(10)) {
     console.log(n);
-} 
+}
 ```
-
-
 
 Jak widać implementacja krótsza i sprowadza się jedynie do określenia tego co ma być generowane. Nie trzeba implementować metod iteratora.
 
 ### Sterowanie generatorem
 
-Można zadać pytanie, jak przerwać pracę iteratora, ewentualnie co stanie się w przypadku wystąpienia błędu, lub co ciekawe, co stanie się  gdy użyjemy  instrukcji `return `zamiast `yield`? 
+[**Generator.prototype.next\(\)**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/next) -   podobnie jak iterator, zwraca obiekt z wartościami  `done `oraz `value`.  `next()` pozwala także na przekazanie wartości do generatora.
 
+**Generator.prototype.return\(\)** - pozwala na zatrzymanie działania iteratora, z opcjonalnie przekazaną wartością.
 
+```js
+function* sampleGenerator() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
 
+let gen = sampleGenerator(); // [object Generator]
+console.log(gen.next()); // Object {value: 1, done: false}
+console.log(gen.next()); // Object {value: 2, done: false}
+console.log(gen.return('SolwIT')); // Object {value: 'SolwIT', done: true}
+console.log(gen.next()); // Object {value: undefined, done: true}
+console.log(gen.next()); // Object {value: undefined, done: true}
+```
 
+**Generator.prototype.throw\(\)** - 
 
 
 
