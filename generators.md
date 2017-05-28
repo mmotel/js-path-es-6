@@ -115,7 +115,7 @@ console.log(gen.throw(new Error('SolwIT'))); // Ooops!  SolwIT, Object {value: u
 console.log(gen.next()); // Object {value: undefined, done: true}
 ```
 
-### Potencjalne zastosowanie genratorów
+### Potencjalne zastosowanie generatorów
 
 * tworzenie kosztownych danych
 * ukrywanie implementacji
