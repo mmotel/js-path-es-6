@@ -102,20 +102,17 @@ function* sampleGenerator() {
         yield 1;
         yield 2;
         yield 3;
+        yield 4;
     } catch (e) {
         console.log('Ooops! ', e.message);
     }
-    yield 4;
-    yield 5;
 }
 
 let gen = sampleGenerator(); // [object Generator]
 console.log(gen.next()); // Object {value: 1, done: false}
 console.log(gen.next()); // Object {value: 2, done: false}
-console.log(gen.throw(new Error('SolwIT'))); // Ooops!  SolwIT, Object {value: 4, done: false}
-console.log(gen.next()); // Object {value: 5, done: false}
+console.log(gen.throw(new Error('SolwIT'))); // Ooops!  SolwIT, Object {value: undefined, done: true}
 console.log(gen.next()); // Object {value: undefined, done: true}
-
 ```
 
 ### Ćwiczenie
