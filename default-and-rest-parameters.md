@@ -2,7 +2,7 @@
 
 ## Parametry domyślne
 
-Zdarza się, że podawanie wszystkich parametrów funkcji nie jest konieczne. Wtedy musimy ustalić ich domyślną wartość.
+Zdarza się, że podawanie wszystkich parametrów funkcji nie jest konieczne lub wymagane. Wtedy musimy ustalić ich domyślną wartość.
 
 Dotychczas musieliśmy radzić sobie z wartościami domyślnymi _ręcznie_ w ciele funkcji.
 
