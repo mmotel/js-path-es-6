@@ -2,6 +2,8 @@
 
 Składnia ES6 pozwala na przypisanie destrukturyzujące tablic oraz obiektów.
 
+> Przypisanie destrukturyzujące umożliwia przypisanie własności tablicy lub obiektu do zmiennych z wykorzystaniem składni przypominającej składnię tablic czy literałów obiektowych. Może być ona niezwykle zwięzła, a jednocześnie znacznie czytelniejsza od tradycyjnego kodu służącego do uzyskania dostępu do własności.
+
 ## Tablica
 
 W ES5 aby przypisać do zmiennych elementy tablicy należało zrobić trzema osobnymi przypisaniami. 
@@ -41,6 +43,7 @@ Możemy również wykorzystać parametr resztowy aby pobrać do jednej zmiennej 
 let [first, ...other] = [1, 2, 3];
 console.log(first); // -> 1
 console.log(other); // -> [2, 3]
+```
 
 ## Obiekt
 
