@@ -36,7 +36,7 @@ console.log(second); // -> 2
 console.log(third);  // -> undefined
 ```
 
-Możemy również wykorzystać parametr resztowy aby pobrać do jednej zmiennej pozostałe elementy tablicy.
+Możemy wykorzystać parametr resztowy aby pobrać do jednej zmiennej pozostałe elementy tablicy.
 
 ##### Przykład 5.4
 ```js
@@ -45,9 +45,19 @@ console.log(first); // -> 1
 console.log(other); // -> [2, 3]
 ```
 
-// TODO - zagnieżdżone tablice
+Ponadto możemy skorzystać również z parametrów domyślych.
 
 ##### Przykład 5.5
+```js
+let [first=1, second=2, third=3] = [];
+console.log(first);  // -> 1
+console.log(second); // -> 2
+console.log(third);  // -> 3
+```
+
+// TODO - zagnieżdżone tablice
+
+##### Przykład 5.6
 ```js
 TODO
 ```
@@ -56,7 +66,7 @@ TODO
 
 Do czasu ES6 w przypadku obiektów również trzeba dokonać kilku przypisań aby wyciągnąć do zmiennych pola obkietu.
 
-##### Przykład 5.6
+##### Przykład 5.7
 ```js
 let foo = { 
     bar: 'bar',
@@ -72,7 +82,7 @@ console.log(bazFromFoo); // -> 'baz'
 
 Składnia ES6 ponownie ułatwia nam pracę.
 
-##### Przykład 5.7
+##### Przykład 5.8
 ```js
 let foo = { 
     bar: 'bar',
@@ -87,7 +97,7 @@ console.log(bazFromFoo); // -> 'baz'
 
 Jeśli nazwa pola obiektu oraz zmiennej, do której chcemy przypisać jego wartość są takie same możemy użyć uproszczonej składni.
 
-##### Przykład 5.8
+##### Przykład 5.9
 ```js
 let foo = { 
     bar: 'bar',
@@ -100,9 +110,18 @@ console.log(bar); // -> 'bar'
 console.log(baz); // -> 'baz'
 ```
 
+Podobnie jak w przypadku tablic, również podczas destrukturyzacji obiektów, przyspianie do zmiennej pola, którego nie ma w obiekcie, spowoduje zwrócenie wartości `undefined`.
+
+##### Przykład 5.10
+```js
+let { foo } = {}
+
+console.log(foo); // -> undefined
+```
+
 Gdy destrukturyzujemy obiekt możemy wykorzystać parametry domyślne.
 
-##### Przykład 5.9
+##### Przykład 5.11
 ```js
 let { foo = 'bar' } = {}
 
@@ -111,7 +130,7 @@ console.log(foo); // -> 'bar'
 
 Szczególnie przydatne jest to podczas pisania funkcji, które przyjmują jako parametr obiekt i nie wymagają podawania wszystkich jego własności.
 
-##### Przykład 5.9
+##### Przykład 5.12
 ```js
 function foo ({first, second, third}) {}
 
@@ -120,7 +139,7 @@ function bar ({first=1, second=2, third=3}) {}
 
 // TODO - zagnieżdżone obiekty
 
-##### Przykład 5.10
+##### Przykład 5.13
 ```js
 TODO
 ```
