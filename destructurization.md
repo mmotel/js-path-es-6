@@ -47,10 +47,16 @@ console.log(other); // -> [2, 3]
 
 // TODO - zagnieżdżone tablice
 
+##### Przykład 5.5
+```js
+TODO
+```
+
 ## Obiekt
 
 Do czasu ES6 w przypadku obiektów również trzeba dokonać kilku przypisań aby wyciągnąć do zmiennych pola obkietu.
 
+##### Przykład 5.6
 ```js
 let foo = { 
     bar: 'bar',
@@ -66,6 +72,7 @@ console.log(bazFromFoo); // -> 'baz'
 
 Składnia ES6 ponownie ułatwia nam pracę.
 
+##### Przykład 5.7
 ```js
 let foo = { 
     bar: 'bar',
@@ -80,6 +87,7 @@ console.log(bazFromFoo); // -> 'baz'
 
 Jeśli nazwa pola obiektu oraz zmiennej, do której chcemy przypisać jego wartość są takie same możemy użyć uproszczonej składni.
 
+##### Przykład 5.8
 ```js
 let foo = { 
     bar: 'bar',
@@ -94,6 +102,7 @@ console.log(baz); // -> 'baz'
 
 Gdy destrukturyzujemy obiekt możemy wykorzystać parametry domyślne.
 
+##### Przykład 5.9
 ```js
 let { foo = 'bar' } = {}
 
@@ -102,6 +111,7 @@ console.log(foo); // -> 'bar'
 
 Szczególnie przydatne jest to podczas pisania funkcji, które przyjmują jako parametr obiekt i nie wymagają podawania wszystkich jego własności.
 
+##### Przykład 5.9
 ```js
 function foo ({first, second, third}) {}
 
@@ -109,6 +119,11 @@ function bar ({first=1, second=2, third=3}) {}
 ```
 
 // TODO - zagnieżdżone obiekty
+
+##### Przykład 5.10
+```js
+TODO
+```
 
 ---
 
