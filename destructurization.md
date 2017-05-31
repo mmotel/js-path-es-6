@@ -141,11 +141,18 @@ function foo ({first, second, third}) {}
 function bar ({first=1, second=2, third=3}) {}
 ```
 
-// TODO - zagnieżdżone obiekty
+Również w przypadku obiektów, możemy łączyć i zagnieżdżać wyrażenia destrukturyzujące.
 
-##### Przykład 5.13
+##### [Przykład 5.13](https://codepen.io/mmotel/pen/oWKqPJ)
 ```js
-TODO
+var complicatedFoo = {
+    bar: [
+        { baz: 'baz' } 
+    ]
+};
+
+let { bar: [ {baz: foo } ]} = complicatedFoo;
+console.log(foo); // -> 'baz'
 ```
 
 ---
