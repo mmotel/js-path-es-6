@@ -115,7 +115,9 @@ console.log(ourCar.lastSpeed);  // -> 120
 
 ### Statyczne metody i własności
 
-Do definiowania statycznych elementów klasy w ES5 należy przypisać je wprost do obiektu klasy.
+Do definiowania statycznych elementów klasy w ES5 należy przypisać je wprost do obiektu klasy. 
+
+Załóżmy, że chcemy policzyć ilość stworzonych instancji klasy `Car`.
 
 ##### [Przykład 2.6](https://codepen.io/mmotel/pen/VWwQLL)
 ```js
@@ -178,32 +180,54 @@ console.log(Car.carsMade); // -> 2
 
 ### Dziedziczenie
 
+Jak każdy język obiektowy, JavaScript pozwala na dziedziczenie klas. W ES5 nie jest to jednak łatwe zadanie.
+
 ```js
-class Foo {
-    
-    constructor (bar) {
-        this.bar = bar;
-    }
-    
-    update (baz) {
-        this.bar = baz;
-    }
+Car = (function () {
+  function Car (engine) {
+    this.engine = engine;
+  }
+  
+  Car.prototype.drive = function (speed) {
+    return 'Car with ' + this.engine + ' engine drives at ' + speed + ' km/h.';
+  }
+  
+  return Car;
+})();
 
-}
+Truck = (function () {
+  function Truck (engine, capacity) {
+    Car.call(this, engine);
+    this.capacity = capacity;
+  } 
+  
+  Truck.prototype = Object.create(Car.prototype);
+  Truck.prototype.constructor = Truck;
+  
+  Truck.prototype.drive = function (speed) {
+    return Car.prototype.drive.call(this, speed) + 
+      ' It is a truck and have ' + this.capacity + ' tons capacity.';
+  }
+  
+  return Truck;
+})();
 
-class Bar extends Foo {
-    
-    constructor (bar, baz) {
-        super(bar);
-        this.baz = baz;
-    }
-    
-    update (bar, baz) {
-        super.update(bar);
-        this.baz = baz;
-    }
-}
+let ourTruck = new Truck('V12', 12000);
+
+console.log(ourTruck.engine, ourTruck.capacity);
+console.log(ourTruck.drive(90));
 ```
+
+Składnia ES6 pozwala nam zapisać powyższe dziedziczenie znacznie prościej.
+
+
+
+```js
+// TODO
+```
+
+
+
 ---
 
 ###### Źródła
