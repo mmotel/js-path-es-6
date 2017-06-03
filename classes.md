@@ -210,3 +210,4 @@ class Bar extends Foo {
 
 * http://shebang.pl/artykuly/es6-bez-tajemnic-klasy/
 * http://shebang.pl/artykuly/es6-bez-tajemnic-podklasy/
+* https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance
