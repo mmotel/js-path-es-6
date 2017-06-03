@@ -1,57 +1,117 @@
 # Klasy
 
-```js
-class Foo {}
+Aby stworzyć klasę w ES5 należało stworzyć funkcję pełniącą rolę konstruktora a następnie posługując się jej prototypem dodawać nowe metody i własności. Aby cały kod klasy był łatwy do zidentyfikowania, dobrze jest ubrać go w IIFE (_Immediately Invoked Function Expression_).
 
-let bar = new Foo();
+
+##### [Przykład 2.1](ps://codepen.io/mmotel/pen/EXYGqJ)
+```js
+Car = (function () {
+  function Car (engine) {
+    this.engine = engine;
+  }
+
+  Car.prototype.drive = function (speed) {
+    this._lastSpeed = speed;
+    return 'Car with ' + this.engine + ' engine ' + 
+      'drives at ' + speed + ' km/h.';
+  }
+
+  Object.defineProperty(Car.prototype, 'lastSpeed', {
+    get: function () { 
+      return this._lastSpeed ? this._lastSpeed : 0; 
+    },
+    enumerable: false,
+    configurable: true
+  });
+  
+  return Car;
+})();
+
+let ourCar = new Car('V8');
+
+console.log(ourCar.drive(120)); // -> 'Car with V8 engine drives at 120 km/h.'
+console.log(ourCar.lastSpeed);  // -> 120
 ```
 
-## Konstruktor
+Powyższy kod spełnia swoje zadanie. Definiuje klasę, jej  metody, pola oraz właściwości. Jest jednak dość skomplikowany i mało elegancki.
 
+Nowa składnia klas wprowadzona w ES6 pozwala nam zdefiniować tą samą klasę w sposób znany z innych języków obiektowych taki jak `Java` korzystając ze słowa kluczowego `class`.
+
+##### Przykład 2.2
 ```js
-class Foo {
+class Car {}
+
+let ourCar = new Car();
+```
+
+### Konstruktor
+
+Nasza klasa potrzebuje konstruktora. Definiujemy go używając słowa kluczowego `constructor`.
+
+##### Przykład 2.3
+```js
+class Car {
     
-    constructor (bar) {
-        this.bar = bar;
+    constructor (engine) {
+        this.engine = engine;
     }
 
 }
+
+let ourCar = new Car('V8');
 ```
 
-## Metody
+### Metody
 
+Metody definiujemy podobnie jak konstruktor.
+
+##### Przykład 2.4
 ```js
-class Foo {
+class Car {
     
-    constructor (bar) {
-        this.bar = bar;
+    constructor (engine) {
+        this.engine = engine;
     }
     
-    update (baz) {
-        this.bar = baz;
+    drive (speed) {
+        return 'Car with ' + this.engine + ' engine ' +
+            'drives at ' + speed + ' km/h.';
     }
 
 }
+
+let ourCar = new Car('V8');
+console.log(ourCar.drive(120)); // -> 'Car with V8 engine drives at 120 km/h.'
 ```
 
-## Właściwości `set` i `get`
+### Właściwości 
 
+Definiowanie własności obiektu jest równie proste jak w przypadku metod. Wykorzystujemy do tego słowa kluczowe `set` i `get`.
+
+##### Przykład 2.5
 ```js
-class Foo {
+class Car {
     
-    constructor (bar) {
-        this._bar = bar;
+    constructor (engine) {
+        this.engine = engine;
     }
     
-    get greetBar () {
-        return 'Hello ' + this._bar;
+    drive (speed) {
+        this._lastSpeed = speed;
+        return 'Car with ' + this.engine + ' engine ' +
+            'drives at ' + speed + ' km/h.';
     }
     
-    set bar (value) {
-        this._bar = value;
+    get lastSpeed () {
+        return this._lastSpeed ? this._lastSpeed : 0;
     }
 
 }
+
+let ourCar = new Car('V8');
+console.log(ourCar.drive(120)); // -> 'Car with V8 engine drives at 120 km/h.'
+console.log(ourCar.lastSpeed);  // -> 120
+
 ```
 
 ## Dziedziczenie
