@@ -31,21 +31,21 @@ Powyższy przykład pokazuje różnicę w działaniu `var` i `let`. Zmienne zade
 ##### [Przykład 1.2](http://plnkr.co/edit/e7ro7q5JKs1K3EfgpdfJ)
 ```js
 function foo () {
-  console.log(a); // -> undefined
+  console.log(a);   // -> undefined
   {
     var a = 10;
   }
-  console.log(a); // -> 10
+  console.log(a);   // -> 10
 }
 
 function bar () {
-  console.log(b); // -> ReferenceError
+  console.log(b);   // -> ReferenceError
   {
     console.log(b); // -> ReferenceError
     let b = 20;
     console.log(b); // -> 20
   }
-  console.log(b); // -> ReferenceError
+  console.log(b);   // -> ReferenceError
 }
 ```
 
