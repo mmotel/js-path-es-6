@@ -117,7 +117,7 @@ console.log(ourCar.lastSpeed);  // -> 120
 
 Do definiowania statycznych elementów klasy w ES5 należy przypisać je wprost do obiektu klasy.
 
-##### Przykład 2.6
+##### [Przykład 2.6](https://codepen.io/mmotel/pen/VWwQLL)
 ```js
 Car = (function () {
     function Car (engine) {
@@ -150,7 +150,7 @@ console.log(Car.carsMade); // -> 2
 
 Składnia klas z ES6 ponownie pozwala na uproszczenie zapisu dzięki wykorzystaniu słowa kluczowego `static`.
 
-##### Przykład 2.7
+##### [Przykład 2.7](https://codepen.io/mmotel/pen/XgWZXO)
 ```js
 class Car {
     constructor (engine) {
