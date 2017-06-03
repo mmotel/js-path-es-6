@@ -80,8 +80,8 @@ Słowo kluczowe `const` pozwala definiować stałe. Działa dokładnie tak jak `
 
 ##### [Przykład 1.4](http://plnkr.co/edit/y2VpTazmZIvNH1T2Lb5P)
 ```js
-const FOO = 'foo';
-FOO = 'bar'; // -> TypeError
+const A = 'a';
+A = 'b'; // -> TypeError
 ```
 
 Jednak pilnowana jest jedynie referencja obiektu przypisanego do stałej. Sprawia to, że możliwe jest modyfikowanie wartości jego pól.
