@@ -111,10 +111,72 @@ class Car {
 let ourCar = new Car('V8');
 console.log(ourCar.drive(120)); // -> 'Car with V8 engine drives at 120 km/h.'
 console.log(ourCar.lastSpeed);  // -> 120
-
 ```
 
-## Dziedziczenie
+### Statyczne metody i własności
+
+Do definiowania statycznych elementów klasy w ES5 należy przypisać je wprost do obiektu klasy.
+
+##### Przykład 2.6
+```js
+Car = (function () {
+    function Car (engine) {
+        this.engine = engine;
+        Car.carsMade += 1;
+    }
+    
+    Object.defineProperty(Car, 'carsMade', {
+        get: function () {
+            return this._count ? this._count : 0;
+        },
+        set: function (value) {
+            this._count = value;
+        },
+        enumerable: false,
+        configurable: true 
+    });
+    
+    Car.buildDefault = function () {
+        return new Car('V8');
+    };
+    
+    return Car;
+})();
+
+let ourCar = new Car('V16');
+let anotherCar = Car.buildDefault();
+console.log(Car.carsMade); // -> 2
+```
+
+Składnia klas z ES6 ponownie pozwala na uproszczenie zapisu dzięki wykorzystaniu słowa kluczowego `static`.
+
+##### Przykład 2.7
+```js
+class Car {
+    constructor (engine) {
+        this.engine = engine;
+        Car.carsMade += 1;
+    }
+    
+    static get carsMade () {
+        return this._count ? this._count : 0;   
+    }
+    
+    static set carsMade (value) {
+        this._count = value;
+    }
+    
+    static buildDefault () {
+        return new Car('V8');
+    }
+}
+
+let ourCar = new Car('V16');
+let anotherCar = Car.buildDefault();
+console.log(Car.carsMade); // -> 2
+```
+
+### Dziedziczenie
 
 ```js
 class Foo {
