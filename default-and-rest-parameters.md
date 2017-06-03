@@ -29,12 +29,14 @@ Ważną cechą parametrów domyślnych jest moment ich ewaluacji. W przeciwieńs
 
 ##### Przykład 4.2
 ```js
-class Foo {
+class CoolDate {
     today (now=new Date()) {
         return 'Today is ' + now;
     }
 }
 ```
+
+**_UWAGA_**: Po parametrze posiadającym wartość domyślną nie mogą występować parametry bez niej.
 
 ## Parametry resztowe
 
