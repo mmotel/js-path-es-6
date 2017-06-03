@@ -182,6 +182,7 @@ console.log(Car.carsMade); // -> 2
 
 Jak każdy język obiektowy, JavaScript pozwala na dziedziczenie klas. W ES5 nie jest to jednak łatwe zadanie.
 
+##### [Przykład 2.8](https://codepen.io/mmotel/pen/MoWQGx)
 ```js
 Car = (function () {
   function Car (engine) {
@@ -206,7 +207,8 @@ Truck = (function () {
   
   Truck.prototype.drive = function (speed) {
     return Car.prototype.drive.call(this, speed) + 
-      ' It is a truck and have ' + this.capacity + ' tons capacity.';
+      ' It is a truck and has ' + 
+          (this.capacity / 1000) + ' tons capacity.';
   }
   
   return Truck;
@@ -214,19 +216,43 @@ Truck = (function () {
 
 let ourTruck = new Truck('V12', 12000);
 
-console.log(ourTruck.engine, ourTruck.capacity);
-console.log(ourTruck.drive(90));
+console.log(ourTruck.engine, ourTruck.capacity); // -> 'V12' - 12000
+console.log(ourTruck.drive(90)); // -> 'Car with V12 engine drives at 90 km/h. It is a truck and has 12 tons capacity.'
 ```
 
-Składnia ES6 pozwala nam zapisać powyższe dziedziczenie znacznie prościej.
+Składnia ES6 pozwala nam zapisać powyższe dziedziczenie znacznie prościej. Wykorzystamy słowa kluczowe `extends` oraz `super`.
 
-
-
+##### [Przykład 2.9](https://codepen.io/mmotel/pen/owNqgZ)
 ```js
-// TODO
+class Car {
+  constructor (engine) {
+    this.engine = engine;
+  }
+
+  drive (speed) {
+    return 'Car with ' + this.engine + ' engine ' +
+      'drives at ' + speed + ' km/h.';
+  }
+}
+
+class Truck extends Car {
+  constructor (engine, capacity) {
+    super(engine);
+    this.capacity = capacity;
+  }
+  
+  drive (speed) {
+    return super.drive(speed) + 
+      ' It is a truck and has ' + 
+        (this.capacity / 1000) + ' tons capacity.';
+  }
+}
+
+let ourTruck = new Truck('V12', 12000);
+
+console.log(ourTruck.engine, ourTruck.capacity); // -> 'V12' - 12000
+console.log(ourTruck.drive(90)); // -> 'Car with V12 engine drives at 90 km/h. It is a truck and has 12 tons capacity.'
 ```
-
-
 
 ---
 
