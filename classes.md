@@ -82,7 +82,8 @@ class Car {
 }
 
 let ourCar = new Car('V8');
-console.log(ourCar.drive(120)); // -> 'Car with V8 engine drives at 120 km/h.'
+console.log(ourCar.drive(120)); 
+// -> 'Car with V8 engine drives at 120 km/h.'
 ```
 
 ### Właściwości 
@@ -219,9 +220,11 @@ Truck = (function () {
 
 let ourTruck = new Truck('V12', 12000);
 
-console.log(ourTruck.engine, ourTruck.capacity); // -> 'V12' - 12000
+console.log(ourTruck.engine, ourTruck.capacity); 
+// -> 'V12' - 12000
 console.log(ourTruck.drive(90)); 
-// -> 'Car with V12 engine drives at 90 km/h. It is a truck and has 12 tons capacity.'
+// -> 'Car with V12 engine drives at 90 km/h. 
+//     It is a truck and has 12 tons capacity.'
 ```
 
 Składnia ES6 pozwala nam zapisać powyższe dziedziczenie znacznie prościej. Wykorzystamy słowa kluczowe `extends` oraz `super`.
@@ -257,7 +260,8 @@ let ourTruck = new Truck('V12', 12000);
 console.log(ourTruck.engine, ourTruck.capacity); 
 // -> 'V12' - 12000
 console.log(ourTruck.drive(90)); 
-// -> 'Car with V12 engine drives at 90 km/h. It is a truck and has 12 tons capacity.'
+// -> 'Car with V12 engine drives at 90 km/h. 
+//     It is a truck and has 12 tons capacity.'
 ```
 
 ---
