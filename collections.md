@@ -9,6 +9,7 @@ Aby rozwiązać dotychczasowe problemy twórcy standardu ES6 wprowadzili do nieg
 
 Zbiór podobnie jak tablica jest modyfikowalną kolekcją. Zasadniczą różnicą pomiędzy nimi jest to, że zbiór nie może zawierać dwóch takich samych elementów. Próba dodania do zbioru elementu, który już się w nim znajduje nie powoduje żadnych zmian zbioru.
 
+##### [Przykład 11.1](https://codepen.io/mmotel/pen/BZabqE)
 ```js
 let students = new Set(['John', 'Jane']);
 
