@@ -186,3 +186,8 @@ students.forEach( (student, key) => {
 ## `WeakSet`
 
 ## `WeakMap`
+
+---
+
+###### Źródła
+* http://shebang.pl/artykuly/kolekcje-es6/
