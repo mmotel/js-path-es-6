@@ -88,7 +88,7 @@ Jest kilka metod, których brakuje w obiekcie `Set`. Są to m.in. metody, które
 
 Słownik podobnie jak obiekt pozwala przechowywać pary klucz-wartość. W odróżnieniu od obiektu, w przypadku słownika nie ma możliwość kolizji wartości z metodami. 
 
-##### Przykład 11.7
+##### [Przykład 11.7](https://codepen.io/mmotel/pen/NgWVqg)
 ```js
 class Student {
   constructor (firstName, lastName) {
@@ -110,6 +110,32 @@ console.log(students);
 ```
 
 Słownik możemy utworzyć przekazując do jego konstruktora inny słownik, tablicę dwuelementowych tablic `[klucz, wartość]` oraz przy pomocy iteratora lub generatora zwracającego takie tablice.
+
+Parę klucz-wartość dodajemy do słownika używając metodę `Map.set`. Dodanie do słownika wartości dla klucza, który już się w nim znajduje spowoduje nadpisanie starej wartości.
+
+##### [Przykład 11.8](https://codepen.io/mmotel/pen/zzYQqe)
+```js
+class Student {
+  constructor (firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+}
+
+let students = new Map([
+  ['John', new Student('John', 'Doe')],
+  ['Jane', new Student('Jane', 'Doe')]
+]);
+
+students.set('John', new Student('John', 'Smith'));
+
+console.log(students);
+// => Map {
+//      "John" => Student {firstName: "John", lastName: "Smith"}, 
+//      "Jane" => Student {firstName: "Jane", lastName: "Doe"}
+//    }
+
+```
 
 ## `WeakSet`
 
