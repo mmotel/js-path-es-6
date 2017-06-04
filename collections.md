@@ -86,6 +86,31 @@ Jest kilka metod, których brakuje w obiekcie `Set`. Są to m.in. metody, które
 
 ## Słownik - `Map`
 
+Słownik podobnie jak obiekt pozwala przechowywać pary klucz-wartość. W odróżnieniu od obiektu, w przypadku słownika nie ma możliwość kolizji wartości z metodami. 
+
+##### Przykład 11.7
+```js
+class Student {
+  constructor (firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+}
+
+let students = new Map([
+  ['John', new Student('John', 'Doe')],
+  ['Jane', new Student('Jane', 'Doe')]
+]);
+
+console.log(students);
+// => Map {
+//      "John" => Student {firstName: "John", lastName: "Doe"}, 
+//      "Jane" => Student {firstName: "Jane", lastName: "Doe"}
+//    }
+```
+
+Słownik możemy utworzyć przekazując do jego konstruktora inny słownik, tablicę dwuelementowych tablic `[klucz, wartość]` oraz przy pomocy iteratora lub generatora zwracającego takie tablice.
+
 ## `WeakSet`
 
 ## `WeakMap`
