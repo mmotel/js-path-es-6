@@ -56,7 +56,7 @@ console.log(students.has('John')); // -> true
 console.log(students.has('Joe'));  // -> false 
 ```
 
-Obiekt `Set` posiada metodę `Set[Symbol.iterator]`. Możemy po nim iterować na dwa sposoby. Pierwszym z nich jest pęta `for`.
+Po zbiorach można iterować. Możemy to robić na dwa sposoby. Pierwszym z nich jest pęta `for`.
 
 ##### [Przykład 11.5](https://codepen.io/mmotel/pen/QgWPjy)
 ```js
@@ -139,7 +139,49 @@ console.log(students);
 
 Podobnie jak zbiór, słownik również posiada metody `Map.has`, `Map.delete`, `Map.clear` oraz pole `Map.size`, które działają analogicznie jak w zbiorach.
 
+Po słowniku można również iterować. Jednak wartości zwracane przez iterator są dwuelementowymi tablicami `[klucz, wartość]`. Ponownie mamy dwa sposoby na iterację. Pętlę `for` oraz metodę `Map.forEach`.
 
+##### [Przykład 11.9](https://codepen.io/mmotel/pen/ZyENBq)
+```js
+class Student {
+  constructor (firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+}
+
+let students = new Map([
+  ['John', new Student('John', 'Doe')],
+  ['Jane', new Student('Jane', 'Doe')]
+]);
+
+for (let [key, student] of students) {
+  console.log(key, student);
+}
+// -> John – Student {firstName: "John", lastName: "Doe"}
+// -> Jane – Student {firstName: "Jane", lastName: "Doe"} 
+```
+
+##### [Przykład 11.10](https://codepen.io/mmotel/pen/wevbJq)
+```js
+class Student {
+  constructor (firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+}
+
+let students = new Map([
+  ['John', new Student('John', 'Doe')],
+  ['Jane', new Student('Jane', 'Doe')]
+]);
+
+students.forEach( (student, key) => {
+  console.log(key, student);
+});
+// -> John – Student {firstName: "John", lastName: "Doe"}
+// -> Jane – Student {firstName: "Jane", lastName: "Doe"} 
+```
 
 ## `WeakSet`
 
