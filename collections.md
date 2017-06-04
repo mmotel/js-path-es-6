@@ -7,6 +7,18 @@ Aby rozwiązać dotychczasowe problemy twórcy standardu ES6 wprowadzili do nieg
 
 ## Zbiór - `Set`
 
+Zbiór podobnie jak tablica jest modyfikowalną kolekcją. Zasadniczą różnicą pomiędzy nimi jest to, że zbiór nie może zawierać dwóch takich samych elementów. Próba dodania do zbioru elementu, który już się w nim znajduje nie powoduje żadnych zmian zbioru.
+
+```js
+let students = new Set(['John', 'Jane']);
+
+console.log(students); // -> Set {"John", "Jane"}
+
+students.add('John');
+
+console.log(students); // -> Set {"John", "Jane"}
+```
+
 ## Słownik - `Map`
 
 ## `WeakSet`
