@@ -137,6 +137,10 @@ console.log(students);
 
 ```
 
+Podobnie jak zbiór, słownik również posiada metody `Map.has`, `Map.delete`, `Map.clear` oraz pole `Map.size`, które działają analogicznie jak w zbiorach.
+
+
+
 ## `WeakSet`
 
 ## `WeakMap`
