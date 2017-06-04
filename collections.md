@@ -13,11 +13,13 @@ Zbiór podobnie jak tablica jest modyfikowalną kolekcją. Zasadniczą różnic�
 ```js
 let students = new Set(['John', 'Jane']);
 
-console.log(students); // -> Set {"John", "Jane"}
+console.log(students);     // -> Set {"John", "Jane"}
+console.log(students.size) // -> 2
 
 students.add('John');
 
-console.log(students); // -> Set {"John", "Jane"}
+console.log(students);     // -> Set {"John", "Jane"}
+console.log(students.size) // -> 2
 ```
 
 ## Słownik - `Map`
