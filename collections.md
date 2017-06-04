@@ -22,6 +22,30 @@ console.log(students);     // -> Set {"John", "Jane"}
 console.log(students.size) // -> 2
 ```
 
+Metoda `Set.add` pozwala na dodawanie do zbioru nowych elementów. Pole `Set.size` przechowuje rozmiar zbioru. Do usuwania elementów ze zbioru służy metoda `Set.delete`.
+
+##### [Przykład 11.2](https://codepen.io/mmotel/pen/ZyEZYL)
+```js
+let students = new Set(['John', 'Jane']);
+
+students.delete('John');
+
+console.log(students);
+console.log(students.size);
+```
+
+Aby sprawdzić czy zbiór zawiera jakiś element korzystamy z metody `Set.has`.
+
+##### [Przykład 11.3](https://codepen.io/mmotel/pen/GERLKe)
+```js
+let students = new Set(['John', 'Jane']);
+
+console.log(students.has('John')); // -> true
+console.log(students.has('Joe'));  // -> false 
+```
+
+
+
 ## Słownik - `Map`
 
 ## `WeakSet`
