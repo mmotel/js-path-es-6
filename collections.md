@@ -78,7 +78,11 @@ let students = new Set(['John', 'Jane']);
 students.forEach( (student) => {
   console.log(student);
 });
+// -> 'John'
+// -> 'Jane'
 ```
+
+Jest kilka metod, których brakuje w obiekcie `Set`. Są to m.in. metody, które znamy z tablic - `map`, `filter`, czy też te pozwalające na grupowe operacje - `addAll`, `deleteAll`.
 
 ## Słownik - `Map`
 
