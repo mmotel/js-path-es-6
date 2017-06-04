@@ -30,13 +30,25 @@ let students = new Set(['John', 'Jane']);
 
 students.delete('John');
 
-console.log(students);
-console.log(students.size);
+console.log(students);      // -> Set { "Jane" }
+console.log(students.size); // -> 1
+```
+
+Metoda `Set.clear` pozwala usunąć ze zbioru wszystkie jego elementy.
+
+##### [Przykład 11.3](https://codepen.io/mmotel/pen/yXLrVg)
+```js
+let students = new Set(['John', 'Jane']);
+
+students.clear();
+
+console.log(students);      // -> Set {}
+console.log(students.size); // -> 0
 ```
 
 Aby sprawdzić czy zbiór zawiera jakiś element korzystamy z metody `Set.has`.
 
-##### [Przykład 11.3](https://codepen.io/mmotel/pen/GERLKe)
+##### [Przykład 11.4](https://codepen.io/mmotel/pen/GERLKe)
 ```js
 let students = new Set(['John', 'Jane']);
 
@@ -44,7 +56,29 @@ console.log(students.has('John')); // -> true
 console.log(students.has('Joe'));  // -> false 
 ```
 
+Obiekt `Set` posiada metodę `Set[Symbol.iterator]`. Możemy po nim iterować na dwa sposoby. Pierwszym z nich jest pęta `for`.
 
+##### [Przykład 11.5](https://codepen.io/mmotel/pen/QgWPjy)
+```js
+let students = new Set(['John', 'Jane']);
+
+for (let student of students) {
+  console.log(student);
+}
+// -> 'John'
+// -> 'Jane'
+```
+
+Możemy również skorzystać z metody `Set.forEach`.
+
+##### [Przykład 11.6](https://codepen.io/mmotel/pen/PjogZr)
+```js
+let students = new Set(['John', 'Jane']);
+
+students.forEach( (student) => {
+  console.log(student);
+});
+```
 
 ## Słownik - `Map`
 
