@@ -109,7 +109,7 @@ console.log(students);
 //    }
 ```
 
-Słownik możemy utworzyć przekazując do jego konstruktora inny słownik, tablicę dwuelementowych tablic `[klucz, wartość]` oraz przy pomocy iteratora lub generatora zwracającego takie tablice.
+Słownik możemy utworzyć przekazując do jego konstruktora inny słownik, tablicę dwuelementowych tablic `[klucz, wartość]`, iterator lub generator zwracającego takie tablice.
 
 Parę klucz-wartość dodajemy do słownika używając metodę `Map.set`. Dodanie do słownika wartości dla klucza, który już się w nim znajduje spowoduje nadpisanie starej wartości.
 
