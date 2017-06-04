@@ -130,7 +130,7 @@ let students = new Map([
 students.set('John', new Student('John', 'Smith'));
 
 console.log(students);
-// => Map {
+// -> Map {
 //      "John" => Student {firstName: "John", lastName: "Smith"}, 
 //      "Jane" => Student {firstName: "Jane", lastName: "Doe"}
 //    }
