@@ -267,7 +267,7 @@ console.log(ourTruck.drive(90));
 
 ### Ćwiczenia
 
-1. Zaimplementować klasę `Person`, posiadającą pola `firstName`, `lastName` oraz `hight` (w centymetrach). Konstruktor powinien przyjmować wartości `firstName` i `lastName`. Dodatkowo klasa powinna posiadać metodę `Person.getName`, która zwraca imię i nazwisko oraz parę własności pozwalającą pobrać i ustawić wzrost w metach.
+1. Zaimplementować klasę `Person`, posiadającą pola `firstName`, `lastName` oraz `height` (w centymetrach). Konstruktor powinien przyjmować wartości `firstName` i `lastName`. Dodatkowo klasa powinna posiadać metodę `Person.getName`, która zwraca imię i nazwisko oraz parę własności pozwalającą pobrać i ustawić wzrost w metach.
 2. Zaimplementować klasę `Student` dziedziczącą po klasie `Person` (z ćwiczenia 1.), która dodatkowo posiada pole `school` przechowujące nazwę szkoły. Klasa `Student` powinna posiadać metodę `Person.greet`, która zwraca komunikat `My name is <name> and I am going to <school>`.
 3. Do klasy `Student` (z ćwiczenia 2.) dodać statyczne własności pozwalające obliczyć średni wzrost utworzonych studentów. 
 
