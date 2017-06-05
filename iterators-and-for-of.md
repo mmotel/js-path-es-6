@@ -158,7 +158,7 @@ for (let word of lipsum) {
 
 ### Ćwiczenie
 
-Zaimplementować klasę `OverNameIterate()`   w konstruktorze przyjmującą kolekcję  obiektów. Klasa musi implementować iterator, pozwalający na wypisywanie z kolejnych obiektów własności `name`.
+(8.1) Zaimplementować klasę `OverNameIterate()`   w konstruktorze przyjmującą kolekcję  obiektów. Klasa musi implementować iterator, pozwalający na wypisywanie z kolejnych obiektów własności `name`.
 
 ```js
 let sampleCollection = [

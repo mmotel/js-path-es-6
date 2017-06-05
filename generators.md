@@ -123,7 +123,7 @@ console.log(gen.next()); // Object {value: undefined, done: true}
 
 ### Ćwiczenie
 
-Przepisać klasę Words z poprzedniego rozdziału. Zamiast implementacji iteratora, użyć generatora.
+(9.1) Przepisz klasę `Words` z poprzedniego rozdziału. Zamiast implementacji iteratora, użyj generatora.
 
 ---
 

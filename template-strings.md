@@ -26,6 +26,12 @@ Używając składni `${}` możemy wstawić do łańcucha dowolną wartość Java
 
 ---
 
+### Ćwiczenie
+
+(6.1) Popraw funkcję `greet` z ćwiczenia 5.1 tak aby wykorzystywała łańcuchy szablonowe.
+
+---
+
 ###### Źródła
 
 * http://shebang.pl/artykuly/es6-bez-tajemnic-lancuchy-szablonowe/
