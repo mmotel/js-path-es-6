@@ -3,7 +3,7 @@
 Aby stworzyć klasę w ES5 należało stworzyć funkcję pełniącą rolę konstruktora a następnie posługując się jej prototypem dodawać nowe metody i własności. Aby cały kod klasy był łatwy do zidentyfikowania, dobrze jest ubrać go w IIFE (_Immediately Invoked Function Expression_).
 
 
-##### [Przykład 2.1](ps://codepen.io/mmotel/pen/EXYGqJ)
+##### [Przykład 2.1](https://codepen.io/mmotel/pen/EXYGqJ)
 ```js
 Car = (function () {
   function Car (engine) {
