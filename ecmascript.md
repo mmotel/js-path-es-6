@@ -8,7 +8,11 @@ W ramach _ECMA_ standardem _ECMAScript_ zajmuje się komisja _CT39_.
 
 ## ECMAScript 5
 
+ES5 jest standardem wydanym 3 Grudnia 2009 roku. Standard ten opisuje język (JavaScript), który jest uznawany za standardowy oraz jest obsługiwany przez wszystkie przeglądarki (tak, tak nawet IE9 - poza trybem `strict`) ([link](https://kangax.github.io/compat-table/es5/). ES5 jest punktem wyjścia dla kolejnych wersji standardu.
+
 ## ECMAScript 6
+
+Standard ES6 znany też jako ES2015 został opublikowany w Czerwcu 2015. ES6 dodaje do standardu wiele nowych funkcjonalności, które pozwalają na łatwiejsze pisanie skomplikowanych aplikacji (klasy, moduły) oraz wiele rozwiązań znanych z innych języków takich jak `Python` (iteratory, generatory, lambdy, kolekcje...). ES6 jest wspierany przez większość obecnych przeglądarek ([link](https://kangax.github.io/compat-table/es6/)).
 
 ---
 
@@ -17,3 +21,4 @@ W ramach _ECMA_ standardem _ECMAScript_ zajmuje się komisja _CT39_.
 * https://pl.wikipedia.org/wiki/ECMAScript
 * https://pl.wikipedia.org/wiki/Ecma_International
 * https://www.ecma-international.org/memento/TC39.htm
+* https://kangax.github.io/compat-table/es6/
