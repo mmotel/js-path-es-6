@@ -183,9 +183,15 @@ students.forEach( (student, key) => {
 // -> Jane – Student {firstName: "Jane", lastName: "Doe"} 
 ```
 
-## `WeakSet`
+## `WeakSet` i `WeakMap`
 
-## `WeakMap`
+Standard ES6 wprowadza jeszcze dwa rodzaje kolekcji: _słaby_ zbiór (`WeakSet`) oraz _słaby_ słownik (`WeakMap`). Od zwykłych zbiorów i słowników odróżniają je trzy cechy:
+
+* obsługują jedynie konstruktor `new`,
+* nie można po nich iterować,
+* obiekty w nich przechowywane są przez _słabe_ referencje.
+
+Dzięki wykorzystaniu _słabych_ kolekcji, możemy zebrać w nich np. elementy `DOM` bez obawy o to, że nie będą mogły zostać one wyczyszczone przez `GC` (_Garbage collector_). 
 
 ---
 
