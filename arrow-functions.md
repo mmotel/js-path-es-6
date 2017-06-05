@@ -88,6 +88,20 @@ Funkcja strzałkowa _dziedziczy_ `this` z zewnętrzego zakresu dzięki czemu mog
 
 ---
 
+### Ćwiczenie
+
+Uzupełnij implementację metody `even`, tak aby zwracała ona tylko parzyste liczby z przekazanej tablicy liczb.
+
+```js
+class ArrayUtils {
+  static even (numbers) {
+    // return ... 
+  }
+}
+```
+
+---
+
 ###### Źródła
 
 * [http://shebang.pl/artykuly/es6-funkcje-strzalkowe/](http://shebang.pl/artykuly/es6-funkcje-strzalkowe/)
