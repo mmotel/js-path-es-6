@@ -157,6 +157,12 @@ console.log(foo); // -> 'baz'
 
 ---
 
+### Ćwiczenie
+
+Zaimplementuj metodę `greet`, która przyjmuje jako parametr dwuelementową tablicę obiektów zawierających pola `name` oraz `age` i zwraca komunikat: `First person is <name1> and <age1> years old. Second person is <name2> and <age2> years old.`
+
+---
+
 ###### Źródła
 
 * http://shebang.pl/artykuly/destrukturyzacja/
