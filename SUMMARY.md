@@ -11,9 +11,8 @@
 * [7. Symbole](symbols.md)
 * [8. Iteratory i pętla for-of](iterators-and-for-of.md)
 * [9. Generatory](generators.md)
-* [10. Obiekty pośredniczące](proxy.md)
-* [11. Kolekcje](collections.md)
-* [12. Moduły](modules.md)
-* [13. Korzystanie z ES6 z transpilerów](transpilers.md)
-* [14. Przyszłość / ES7](future-es7.md)
+* [10. Kolekcje](collections.md)
+* [11. Moduły](modules.md)
+* [12. Korzystanie z ES6 z transpilerów](transpilers.md)
+* [13. Przyszłość / ES7](future-es7.md)
 

@@ -1,5 +1,6 @@
 img[src="assets/LOGO_SOLWIT.png"] {
     max-width: 500px;
+    width: 100%;
     margin: 15% auto;
     display: block;
 }
