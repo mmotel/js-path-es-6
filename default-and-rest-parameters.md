@@ -89,6 +89,13 @@ _**UWAGA**_: Funkcja może zawierać tylko jeden parametr resztowy i musi on zna
 
 ---
 
+### Ćwiczenia
+
+1. Zaimplementować funkcję `greet`, która przyjmuje parametr `name` i zwraca komunikat `Hello World! I am <name>.`. Jeśli parametr nie zostanie podany funkcja powinna zwrócić komunikat `Hello World! I am John Doe.`.
+2. Zaimplementować funkcję `addAll`, która przyjmuje dowolną ilość liczb i zwraca ich sumę.
+
+---
+
 ##### Źródła
 
 * [http://shebang.pl/artykuly/es6-bez-tajemnic-parametry-resztowe-domyslne/](http://shebang.pl/artykuly/es6-bez-tajemnic-parametry-resztowe-domyslne/)
