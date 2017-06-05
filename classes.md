@@ -263,6 +263,7 @@ console.log(ourTruck.drive(90));
 // -> 'Car with V12 engine drives at 90 km/h. 
 //     It is a truck and has 12 tons capacity.'
 ```
+---
 
 ### Ćwiczenia
 
