@@ -13,6 +13,6 @@
 * [9. Generatory](generators.md)
 * [10. Kolekcje](collections.md)
 * [11. Moduły](modules.md)
-* [12. Korzystanie z ES6 z transpilerów](transpilers.md)
+* [12. Transpilery ES6](transpilers.md)
 * [13. Przyszłość / ES7](future-es7.md)
 
