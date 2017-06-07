@@ -8,6 +8,8 @@ Istnieje już kilka systemów modułów w JavaScript, np. `AMD`, `SystemJS` czy 
 
 export function, let, const
 
+export as
+
 export default
 
 export barrels
