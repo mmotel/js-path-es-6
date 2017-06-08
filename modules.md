@@ -68,7 +68,7 @@ export * from 'module-1.js';
 export * from 'module-2.js';
 ```
 
-### Przykład z wykorzystaniem BabelJS
+#### [Przykłady z wykorzystaniem BabelJS](link_do_repo_na_githubie) 
 
 ---
 
