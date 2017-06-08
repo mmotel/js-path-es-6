@@ -79,4 +79,5 @@ export * from 'module-2.js';
 ###### Źródła
 
 * http://shebang.pl/artykuly/es6-bez-tajemnic-moduly/
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 * [https://blog.revillweb.com/using-es2015-es6-modules-with-babel-6](https://blog.revillweb.com/using-es2015-es6-modules-with-babel-6-3ffc0870095b)
