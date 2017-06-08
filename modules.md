@@ -68,40 +68,6 @@ export * from 'module-1.js';
 export * from 'module-2.js';
 ```
 
-#### Domyślne elementy modułów
-
-```js
-//our-module.js
-function foo () {
-    //...
-}
-
-function bar () {
-    //...
-}
-
-export default {FOO: foo, BAR: bar};
-```
-
-```js
-//our-module.js
-function foo () {
-    //...
-}
-
-function bar () {
-    //...
-}
-
-let exportedElements = {FOO: foo, BAR: bar};
-
-export {exportedElements as default };
-```
-
-
-import default
-
-
 ### Przykład z wykorzystaniem BabelJS
 
 ---
