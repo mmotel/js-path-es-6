@@ -6,9 +6,26 @@ Istnieje już kilka systemów modułów w JavaScript, np. `AMD`, `SystemJS` czy 
 
 ### Definiowanie modułów
 
-export function, let, const
+Moduł to po prostu plik `.js` eksportujący część swoich funkcji, zmiennych i stałych.
 
-export as
+
+```js
+export const A = 10;
+
+export let B = 20;
+
+export function greet (name) {
+    return `Hello! My name is ${name}.`;
+}
+```
+
+Możemy też zmienić nazwę elementu podczas eksportu.
+
+```js
+const A = 10;
+
+export { A as B };
+```
 
 export default
 
