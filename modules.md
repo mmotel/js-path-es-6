@@ -54,8 +54,12 @@ A także podczas importu.
 import { B as C } from 'our-module.js'; 
 ```
 
+Importowanie wszystkich elementów modułu do przestrzeni nazw może być kłopotliwe, może dojść na przykład do kolizji nazw. Możemy wykorzystać `as` aby zamknąć przestrzeń nazw modułu do osobnej przestrzeni nazw.
+
 ```js
 import * as ourModule from 'our-module.js';
+
+console.log(ourModule.B); // -> 10
 ```
 
 #### Moduły agregujące
