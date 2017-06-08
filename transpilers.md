@@ -5,7 +5,6 @@ Aby pisać kod w ES6 bez obawy o wsparcie przegląd należy skorzystać z transl
 Mamy do wyboru kilka opcji:
 * [BabelJS](https://babeljs.io),
 * [Traceur.js](https://github.com/google/traceur-compiler),
-* [Broccoli.js](http://broccolijs.com),
 * [~~TypeScript~~](http://www.typescriptlang.org).
 
 ### Na czym polega transpilacja?
