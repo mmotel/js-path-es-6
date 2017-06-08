@@ -54,7 +54,7 @@ A także podczas importu.
 import { B as C } from 'our-module.js'; 
 ```
 
-Importowanie wszystkich elementów modułu do przestrzeni nazw może być kłopotliwe, może dojść na przykład do kolizji nazw. Możemy wykorzystać `as` aby zamknąć przestrzeń nazw modułu do osobnej przestrzeni nazw.
+Importowanie wszystkich elementów modułu powoduje przypisanie jego całej przestrzeni nazw do obecnego zakresu. Może być kłopotliwe,  na przykład z powodu kolizji nazw. Możemy wykorzystać `as` aby zamknąć przestrzeń nazw modułu w obiekcie.
 
 ```js
 import * as ourModule from 'our-module.js';
