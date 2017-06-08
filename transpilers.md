@@ -2,6 +2,8 @@
 
 Aby pisać kod w ES6 bez obawy o wsparcie przegląd należy skorzystać z translipatora. Jest to narzędzie, które nasz kod napisany w ES6 zamienia na przyjazny, obsługiwany przez wszystkie przeglądarki kod ES5.
 
+### `ES6` -> `transpilator` -> `ES5`
+
 Mamy do wyboru kilka opcji:
 * [BabelJS](https://babeljs.io),
 * [Traceur.js](https://github.com/google/traceur-compiler),
