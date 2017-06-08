@@ -7,13 +7,36 @@ Mamy do wyboru kilka opcji:
 * [Traceur.js](https://github.com/google/traceur-compiler),
 * [~~TypeScript~~](http://www.typescriptlang.org).
 
-### Na czym polega transpilacja?
+#### Na czym polega transpilacja?
 
-kod w ES6
+Piszemy kod wykorzystując składnię ES6.
 
-kod w ES5
+```js
+let name = 'John Doe';
 
-Przykłady online BabelJS i TypeScript
+function greet (name = 'Jane Doe') {
+    return `My name is ${name}.`;
+}
+
+console.log(greet(name));
+console.log(greet());
+```
+
+Transpilator tłumaczy nasz kod na ES5.
+
+```js
+var name = 'John Doe';
+
+function greet (name) {
+    if (name === undefined) { name = 'Jane Doe'; };
+    return `My name is ' + name + '.';
+}
+
+console.log(greet(name));
+console.log(greet());
+```
+
+#### Przykłady działania BabelJS i TypeScript
 
 https://babeljs.io/repl/
 
