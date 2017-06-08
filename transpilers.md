@@ -1,4 +1,4 @@
-# Transpilery ES6
+# Transpilatory ES6
 
 Aby pisać kod w ES6 bez obawy o wsparcie przegląd należy skorzystać z translipatora. Jest to narzędzie, które nasz kod napisany w ES6 zamienia na przyjazny, obsługiwany przez wszystkie przeglądarki kod ES5.
 
