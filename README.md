@@ -1,4 +1,4 @@
-# JS Path: ECMAScript 6
+# Ścieżka JavaScript: ECMAScript 6
 
 
 
