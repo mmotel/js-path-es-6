@@ -38,11 +38,13 @@ console.log(greet(name));
 console.log(greet());
 ```
 
-#### Przykłady działania BabelJS i TypeScript
+#### Przykłady działania
 
-https://babeljs.io/repl/
+* [let, parametry domyslne, łańcuchy szablonowe - BabelJS](http://bit.ly/2rJCPiu)
 
-http://www.typescriptlang.org/play/
+* [klasy, metody, właściwości - BabelJS](http://bit.ly/2rex9cL)
+
+* [TypeScript](http://www.typescriptlang.org/play/)
 
 ---
 
