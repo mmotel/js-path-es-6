@@ -20,7 +20,7 @@
 ```
 
 
-## mmotel.gitbooks.io/js-path-es-6/content/
+### mmotel.gitbooks.io/js-path-es-6/content/
 
 
 
