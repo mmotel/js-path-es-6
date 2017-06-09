@@ -72,7 +72,7 @@ export * from 'module-1.js';
 export * from 'module-2.js';
 ```
 
-#### [Przykłady z wykorzystaniem BabelJS](link_do_repo_na_githubie) 
+#### [Przykłady z wykorzystaniem BabelJS](https://github.com/mmotel/es6-modules-demo) 
 
 ---
 
