@@ -40,11 +40,11 @@ console.log(greet());
 
 #### Przykłady działania
 
-* [let, parametry domyslne, łańcuchy szablonowe - BabelJS](http://bit.ly/2rJCPiu)
+* [let, parametry domyślne, łańcuchy szablonowe - BabelJS](http://bit.ly/2rJCPiu),
 
-* [klasy, metody, właściwości - BabelJS](http://bit.ly/2rex9cL)
+* [klasy, metody, właściwości - BabelJS](http://bit.ly/2rex9cL),
 
-* [TypeScript](http://www.typescriptlang.org/play/)
+* [TypeScript](http://www.typescriptlang.org/play/).
 
 ---
 
