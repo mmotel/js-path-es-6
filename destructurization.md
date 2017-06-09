@@ -18,7 +18,7 @@ let third  = numbers[2];
 
 Dzięki nowej składni możemy dokonać tego prościej.
 
-##### Przykład 5.2
+##### [Przykład 5.2](https://codepen.io/mmotel/pen/pwgQrL)
 ```js
 let [first, second, third] = [1, 2, 3];
 console.log(first);  // -> 1
@@ -28,7 +28,7 @@ console.log(third);  // -> 3
 
 Jeśli spróbujemy pobrać do zmiennej element tablicy, którego w niej nie ma zwrócona zostanie wartość `undefined`.
 
-##### Przykład 5.3
+##### [Przykład 5.3](https://codepen.io/mmotel/pen/qjbQXz)
 ```js
 let [first, second, third] = [1, 2];
 console.log(first);  // -> 1
@@ -38,7 +38,7 @@ console.log(third);  // -> undefined
 
 Możemy wykorzystać parametr resztowy aby pobrać do jednej zmiennej pozostałe elementy tablicy.
 
-##### Przykład 5.4
+##### [Przykład 5.4](https://codepen.io/mmotel/pen/weMQrd)
 ```js
 let [first, ...other] = [1, 2, 3];
 console.log(first); // -> 1
@@ -47,7 +47,7 @@ console.log(other); // -> [2, 3]
 
 Ponadto możemy skorzystać również z parametrów domyślych.
 
-##### Przykład 5.5
+##### [Przykład 5.5](https://codepen.io/mmotel/pen/rwxQGQ)
 ```js
 let [first=1, second=2, third=3] = [];
 console.log(first);  // -> 1
@@ -57,7 +57,7 @@ console.log(third);  // -> 3
 
 Możliwa jest również destrukturyzacja zagnieżdżonych tablic.
 
-##### Przykład 5.6
+##### [Przykład 5.6](https://codepen.io/mmotel/pen/JJGerQ)
 ```js
 let [first, [second, third, [fourth]]] = [1, [2, 3, [4]]];
 console.log(first);  // -> 1
