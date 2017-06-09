@@ -71,7 +71,7 @@ for (let student of students) {
 
 Możemy również skorzystać z metody `Set.forEach`.
 
-##### [Przykład 11=0.6](https://codepen.io/mmotel/pen/PjogZr)
+##### [Przykład 10.6](https://codepen.io/mmotel/pen/PjogZr)
 ```js
 let students = new Set(['John', 'Jane']);
 

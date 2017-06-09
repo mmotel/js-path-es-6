@@ -20,8 +20,8 @@ function greet (name = 'Jane Doe') {
     return `My name is ${name}.`;
 }
 
-console.log(greet(name));
-console.log(greet());
+console.log(greet(name)); // -> 'My name is John Doe.'
+console.log(greet());     // -> 'My name is Jane Doe.'
 ```
 
 Transpilator tłumaczy nasz kod na ES5.
@@ -34,8 +34,8 @@ function greet (name) {
     return `My name is ' + name + '.';
 }
 
-console.log(greet(name));
-console.log(greet());
+console.log(greet(name)); // -> 'My name is John Doe.'
+console.log(greet());     // -> 'My name is Jane Doe.'
 ```
 
 #### Przykłady działania
