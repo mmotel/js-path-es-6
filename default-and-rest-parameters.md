@@ -6,7 +6,7 @@ Zdarza się, że podawanie wszystkich parametrów funkcji nie jest konieczne lub
 
 Dotychczas musieliśmy radzić sobie z wartościami domyślnymi _ręcznie_ w ciele funkcji.
 
-##### Przykład 4.1
+##### [Przykład 4.1](https://codepen.io/mmotel/pen/LLGXNo)
 ```js
 function square (a) {
     a = a !== undefined ? a : 0;
@@ -27,7 +27,7 @@ Ważną cechą parametrów domyślnych jest moment ich ewaluacji. W przeciwieńs
 
 **_UWAGA_**: Po parametrze posiadającym wartość domyślną nie mogą występować parametry bez niej.
 
-##### Przykład 4.2
+##### [Przykład 4.2](https://codepen.io/mmotel/pen/MoKzeV)
 ```js
 class CoolDate {
     today (now=new Date()) {
@@ -44,7 +44,7 @@ JavaScript pozwala na pisanie funkcji przyjmujących dowolną ilość argumentó
 
 Zdefiniujemy funkcję `concatAll`, która przyjmuje conajmniej dwie tablice i zwraca ich konkatenację. 
 
-##### [Przykład 4.3](http://plnkr.co/edit/JKMh4rFHwq8UYg0bCgDR)
+##### [Przykład 4.3](https://codepen.io/mmotel/pen/OgMaWb)
 ```js
 function concatAll (array1, array2) {
   let result = array1.concat(array2);
@@ -67,7 +67,7 @@ Na pierwszy rzut oka trudno stwierdzić ile argumentów przyjmuje nasza funkcja.
 
 Odpowiedzią na wszystkie te problemy jest parametr resztowy.
 
-##### [Przykład 4.4](http://plnkr.co/edit/6z4lqM4ekG4c4LXXrkdE)
+##### [Przykład 4.4](https://codepen.io/mmotel/pen/dRGQvb)
 ```js
 function concatAll2 (array1, array2, ...arrays) {
   let result = array1.concat(array2);
