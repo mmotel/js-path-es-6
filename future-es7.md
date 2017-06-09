@@ -2,7 +2,7 @@
 
 Kolejne wersje standardu ECMAScript przyniosą sporo ciekawych funkcjonalności. Poniżej lista kilku najciekawszych z nich.
 
-### `Array.prototype.includes` `(ES7)`
+### `Array.prototype.includes` `ES7`
 
 Obecnie aby sprawdzić czy element znajduje się w tablicy trzeba skorzystać z metody `Array.indexOf`.
 
@@ -25,7 +25,7 @@ console.log(containsOne); // -> true
 
 ```
 
-### Operator potęgowania `(ES7)`
+### Operator potęgowania `ES7`
 
 Obecnie aby podjeść `x` do potęgi `y` należy wykorzystać metodę `Math.pow`.
 
