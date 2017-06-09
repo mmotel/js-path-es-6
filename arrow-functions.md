@@ -46,7 +46,7 @@ Jeśli zdefiniujemy ciało _strzałki_ nie zwraca już ona domyślnie swojej war
 
 Subtelną ale bardzo ważną rożnicą pomiędzy zwykłą funkcją a _strzałką_ jest wiązanie wartości `this`.
 
-##### Przykład 4.4
+##### [Przykład 4.4](https://codepen.io/mmotel/pen/mwVQmV)
 
 ```js
 class Foo {
@@ -65,7 +65,7 @@ W powyższym przykładzie wewnątrz `function` wartość `this` będzie równa `
 
 Rozwiązaniem jest zasotoswanie funkcji strzałkowej.
 
-##### Przykład 4.5
+##### [Przykład 4.5](https://codepen.io/mmotel/pen/zzrMzy)
 
 ```js
 class Foo {
