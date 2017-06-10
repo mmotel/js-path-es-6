@@ -1,6 +1,6 @@
 # Generatory
 
-Generatory są [iteratorami](/iterators-and-for-of.md). Wszystkie generatory mają wbudowaną implementację metod `next` i `[Symbol.iterator]`
+Generatory są [iteratorami](/iterators-and-for-of.md). Wszystkie generatory mają wbudowaną implementację metod `next` i `[Symbol.iterator]`.
 
 ## Przykładowy generator
 
@@ -40,7 +40,8 @@ console.log(gen.next());
 console.log(gen.next()); 
 // -> Object {value: undefined, done: true}
 
-for (var val of sampleGenerator()) { // Tak! var zamiast let
+for (var val of sampleGenerator()) { 
+    // Tak! var zamiast let
     console.log(val);
 }
 
@@ -135,7 +136,7 @@ console.log(gen.next());
 
 console.log(gen.throw(new Error('SolwIT'))); 
 // -> Ooops! SolwIT
-// ->  Object {value: undefined, done: true}
+// -> Object {value: undefined, done: true}
 
 console.log(gen.next()); 
 // -> Object {value: undefined, done: true}
