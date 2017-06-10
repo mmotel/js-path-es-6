@@ -42,7 +42,7 @@ window[clicks] = 0;
 
 Dzięki unikalności symboli możemy dodawać pola do istniejących obieków, które nie należą do nas lub mogą być wykorzystywane przez inne skrypty czy biblioteki bez obaw o kolizje nazw. 
 
-Dodatkowo pola z nazwami, które są symbolami są pomijane przez większość narzędzi do inspekcji obiektów takie jak pętla `for-in`, `Object.keys` czy `Object.getOwnPropertyNames`. Możemy zatem pokusić się o stworzenie prawie-prywatnych pól w klasach.
+Dodatkowo pola z nazwami, które są symbolami są pomijane przez większość narzędzi do inspekcji obiektów takie jak pętla `for-in`, `Object.keys()` czy `Object.getOwnPropertyNames()`. Możemy zatem pokusić się o stworzenie prawie-prywatnych pól w klasach.
 
 ##### [Przykład 7.4](https://codepen.io/mmotel/pen/NgxVBx)
 ```js
@@ -63,7 +63,7 @@ let foo = new Foo('bar');
 console.log(foo.greet()); // -> 'bar'
 ```
 
-Jednak pola z kluczami będącymi symbolami nie są pomijane przez wszystkie dostępne narzędzia do inspekcji obiektów. Nowe interfejsy API pozwala na ich pobranie - `Object.getOwnPropertySymbols`,  `Reflect.ownKeys`.
+Jednak pola z kluczami będącymi symbolami nie są pomijane przez wszystkie dostępne narzędzia do inspekcji obiektów. Nowe interfejsy API pozwala na ich pobranie - `Object.getOwnPropertySymbols()`,  `Reflect.ownKeys()`.
 
 ## Sposoby uzyskania symbolu
 

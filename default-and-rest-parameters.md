@@ -42,7 +42,7 @@ class CoolDate {
 
 JavaScript pozwala na pisanie funkcji przyjmujących dowolną ilość argumentów. 
 
-Zdefiniujemy funkcję `concatAll`, która przyjmuje conajmniej dwie tablice i zwraca ich konkatenację. 
+Zdefiniujemy funkcję `concatAll()`, która przyjmuje conajmniej dwie tablice i zwraca ich konkatenację. 
 
 ##### [Przykład 4.3](https://codepen.io/mmotel/pen/OgMaWb)
 ```js

@@ -30,7 +30,7 @@ for (let i in myArray) {
 
 Index `i` będzie typu string.  Kolejność iteracji nie jest gwarantowana.  `for..in`  stworzono do iteracji po właściwościach obiektu.
 
-### `forEach`
+### `forEach()`
 
 W ES5 możemy użyć metody  `Array.forEach()` do iterowania po tablicach.
 
@@ -48,7 +48,7 @@ Pewnym problemem jest przerwanie takiej pętli. Nie ma zastosowania `break` . Po
 
 ### `for-of`
 
-Pętla `for-of` została stworzona do rozwiązania problemów pętli przedstawionych powyżej. Pozwala iterować po wielu typach danych  (Array, String, TypedArray, Map, Set, DOMCollection, Iterators, Generators\), nie powielając problemów wyżej przedstawionych rozwiązań.
+Pętla `for-of` została stworzona do rozwiązania problemów pętli przedstawionych powyżej. Pozwala iterować po wielu typach danych  (`Array`, `String`, `TypedArray`, `Map`, `Set`, `DOMCollection`, `Iterators`, `Generators`), nie powielając problemów wyżej przedstawionych rozwiązań.
 
 ##### Przykład 8.4
 ```js
@@ -69,7 +69,7 @@ for (let i of myArray) {
 >
 > Metodę iteracyjną może ponadto mieć jeszcze jeden rodzaj obiektu: dowolnie wybrany obiekt.
 >
-> Podobnie jak dodanie `mójObiekt.toString()` do jakiegokolwiek obiektu sprawia, że JS od razu wie jak konwertować dany obiekt na łańcuch znaków, dodanie metody [`mójObiekt[Symbol.iterator]`](symbols.md) do **dowolnego obiektu** sprawi, że JS bez problemu wykona na nim pętlę.
+> Podobnie jak dodanie `mójObiekt.toString()` do jakiegokolwiek obiektu sprawia, że JS od razu wie jak konwertować dany obiekt na łańcuch znaków, dodanie metody [`mójObiekt[Symbol.iterator]()`](symbols.md) do **dowolnego obiektu** sprawi, że JS bez problemu wykona na nim pętlę.
 
 Obiekty z metodą `[Symbol.iterator]()` nazywamy obiektami iterowalnymi.  Stwórzmy najprostszy możliwy iterator (obiekt, który zawiera jedynie metodę iteratora).
 
@@ -89,7 +89,7 @@ for (let value of timestampForeverIterator) {
 }
 ```
 
-Funkcja iteratora musi zwracać obiekt zawierający metodę `next`. Metoda `next` zaś musi zwracać obiekt informujący czy iteracja dobiegła już końca (pole `done`) oraz, że kolejną wartością  `value` jest timestamp (`Date.now()`).
+Funkcja iteratora musi zwracać obiekt zawierający metodę `next()`. Metoda `next()` zaś musi zwracać obiekt informujący czy iteracja dobiegła już końca (pole `done`) oraz, że kolejną wartością  `value` jest timestamp (`Date.now()`).
 
 > Funkcjonowanie takiego iteratora, mającego własności `done` i `value`, różni się od iteratorów w innych językach. W Javie iteratory mają osobne metody `hasNext()` i `next()`. W Pythonie natomiast istnieje pojedyncza metoda `next()`, która zgłasza wyjątek `StopIteration` po wyczerpaniu się wszystkich wartości. We wszystkich trzech przypadkach zwracane są jednak właściwie te same informacje.
 

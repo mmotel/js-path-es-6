@@ -22,7 +22,7 @@ console.log(students);     // -> Set {"John", "Jane"}
 console.log(students.size) // -> 2
 ```
 
-Metoda `Set.add` pozwala na dodawanie do zbioru nowych elementów. Pole `Set.size` przechowuje rozmiar zbioru. Do usuwania elementów ze zbioru służy metoda `Set.delete`.
+Metoda `Set.add()` pozwala na dodawanie do zbioru nowych elementów. Pole `Set.size` przechowuje rozmiar zbioru. Do usuwania elementów ze zbioru służy metoda `Set.delete()`.
 
 ##### [Przykład 10.2](https://codepen.io/mmotel/pen/ZyEZYL)
 ```js
@@ -34,7 +34,7 @@ console.log(students);      // -> Set { "Jane" }
 console.log(students.size); // -> 1
 ```
 
-Metoda `Set.clear` pozwala usunąć ze zbioru wszystkie jego elementy.
+Metoda `Set.clear()` pozwala usunąć ze zbioru wszystkie jego elementy.
 
 ##### [Przykład 10.3](https://codepen.io/mmotel/pen/yXLrVg)
 ```js
@@ -46,7 +46,7 @@ console.log(students);      // -> Set {}
 console.log(students.size); // -> 0
 ```
 
-Aby sprawdzić czy zbiór zawiera jakiś element korzystamy z metody `Set.has`.
+Aby sprawdzić czy zbiór zawiera jakiś element korzystamy z metody `Set.has()`.
 
 ##### [Przykład 10.4](https://codepen.io/mmotel/pen/GERLKe)
 ```js
@@ -69,7 +69,7 @@ for (let student of students) {
 // -> 'Jane'
 ```
 
-Możemy również skorzystać z metody `Set.forEach`.
+Możemy również skorzystać z metody `Set.forEach()`.
 
 ##### [Przykład 10.6](https://codepen.io/mmotel/pen/PjogZr)
 ```js
@@ -82,7 +82,7 @@ students.forEach( (student) => {
 // -> 'Jane'
 ```
 
-Jest kilka metod, których brakuje w obiekcie `Set`. Są to m.in. metody, które znamy z tablic - `map`, `filter`, czy też te pozwalające na grupowe operacje - `addAll`, `deleteAll`.
+Jest kilka metod, których brakuje w obiekcie `Set`. Są to m.in. metody, które znamy z tablic - `map()`, `filter()`, czy też te pozwalające na grupowe operacje - `addAll()`, `deleteAll()`.
 
 ## Słownik - `Map`
 
@@ -111,7 +111,7 @@ console.log(students);
 
 Słownik możemy utworzyć przekazując do jego konstruktora inny słownik, tablicę dwuelementowych tablic `[klucz, wartość]`, iterator lub generator zwracającego takie tablice.
 
-Parę klucz-wartość dodajemy do słownika używając metodę `Map.set`. Dodanie do słownika wartości dla klucza, który już się w nim znajduje spowoduje nadpisanie starej wartości.
+Parę klucz-wartość dodajemy do słownika używając metodę `Map.set()`. Dodanie do słownika wartości dla klucza, który już się w nim znajduje spowoduje nadpisanie starej wartości.
 
 ##### [Przykład 10.8](https://codepen.io/mmotel/pen/zzYQqe)
 ```js
@@ -137,9 +137,9 @@ console.log(students);
 
 ```
 
-Podobnie jak zbiór, słownik również posiada metody `Map.has`, `Map.delete`, `Map.clear` oraz pole `Map.size`, które działają analogicznie jak w zbiorach.
+Podobnie jak zbiór, słownik również posiada metody `Map.has()`, `Map.delete()`, `Map.clear()` oraz pole `Map.size`, które działają analogicznie jak w zbiorach.
 
-Po słowniku można również iterować. Jednak wartości zwracane przez iterator są dwuelementowymi tablicami `[klucz, wartość]`. Ponownie mamy dwa sposoby na iterację. Pętlę `for` oraz metodę `Map.forEach`.
+Po słowniku można również iterować. Jednak wartości zwracane przez iterator są dwuelementowymi tablicami `[klucz, wartość]`. Ponownie mamy dwa sposoby na iterację. Pętlę `for` oraz metodę `Map.forEach()`.
 
 ##### [Przykład 10.9](https://codepen.io/mmotel/pen/ZyENBq)
 ```js

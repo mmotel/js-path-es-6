@@ -90,7 +90,7 @@ Funkcja strzałkowa _dziedziczy_ `this` z zewnętrzego zakresu dzięki czemu mog
 
 ### Ćwiczenie
 
-(4.1) Uzupełnij implementację metody `even`, tak aby zwracała ona tylko parzyste liczby z przekazanej tablicy liczb.
+(4.1) Uzupełnij implementację metody `even()`, tak aby zwracała ona tylko parzyste liczby z przekazanej tablicy liczb.
 
 ```js
 class ArrayUtils {

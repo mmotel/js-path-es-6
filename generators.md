@@ -1,6 +1,6 @@
 # Generatory
 
-Generatory są [iteratorami](/iterators-and-for-of.md). Wszystkie generatory mają wbudowaną implementację metod `next` i `[Symbol.iterator]`.
+Generatory są [iteratorami](/iterators-and-for-of.md). Wszystkie generatory mają wbudowaną implementację metod `next()` i `[Symbol.iterator]()`.
 
 ## Przykładowy generator
 
@@ -57,17 +57,17 @@ console.log(val);
 
 Samo wywołanie generatora wygląda identycznie jak wywołanie funkcji: `sampleGenerator()`.  Generator nie rozpoczyna jednak działania od razu. Na początek zwracany jest wstrzymany obiekt generatora - `gen` – można go porównać do wstrzymanego wywołania funkcji. Do wstrzymania tego dochodzi zaraz na początku generatora, tuż przed wykonaniem pierwszej linijki kodu.
 
-Po każdym wywołaniu metody obiektu generatora `next` funkcja zostaje wznowiona i jest wykonywana aż do kolejnej instrukcji `yield`.
+Po każdym wywołaniu metody obiektu generatora `next()` funkcja zostaje wznowiona i jest wykonywana aż do kolejnej instrukcji `yield`.
 
-Po ostatnim wywołaniu metody `gen.next` generator dobiega końca, dlatego w polu `done` zwracanego obiektu mamy wartość `true`. Zakończenie wywoływania funkcji oznacza praktycznie zwrócenie wartości `undefined`, stąd też wartość ta pojawia się w polu `value`.
+Po ostatnim wywołaniu metody `gen.next()` generator dobiega końca, dlatego w polu `done` zwracanego obiektu mamy wartość `true`. Zakończenie wywoływania funkcji oznacza praktycznie zwrócenie wartości `undefined`, stąd też wartość ta pojawia się w polu `value`.
 
 ### Istotne!
 
-> Za każdym razem, gdy generator wykonuje instrukcję `yield` jego ramka stosu – zmienne lokalne, argumenty, wartości tymczasowe oraz informacja na temat aktualnego miejsca wykonania w kodzie generatora – zostaje usunięta ze stosu. Obiekt generatora przechowuje jednak odniesienie do ramki (bądź jego kopię), dzięki czemu kolejne wywołanie metody `next` może ją reaktywować i kontynuować wykonywanie funkcji.
+> Za każdym razem, gdy generator wykonuje instrukcję `yield` jego ramka stosu – zmienne lokalne, argumenty, wartości tymczasowe oraz informacja na temat aktualnego miejsca wykonania w kodzie generatora – zostaje usunięta ze stosu. Obiekt generatora przechowuje jednak odniesienie do ramki (bądź jego kopię), dzięki czemu kolejne wywołanie metody `next()` może ją reaktywować i kontynuować wykonywanie funkcji.
 
 ## Generatory są iteratorami
 
-Powtórzmy jeszcze raz: generatory są [iteratorami](/iterators-and-for-of.md). Wszystkie generatory mają wbudowaną implementację metod `next` i `[Symbol.iterator]`.  Programista musi tylko napisać kod realizujący działanie pętli.  Zaimplementujmy zatem generator `randomRange` zwracający losowe liczby z określonego zakresu (analogicznie do [iteratora z poprzedniego rozdziału](/iterators-and-for-of.md)).
+Powtórzmy jeszcze raz: generatory są [iteratorami](/iterators-and-for-of.md). Wszystkie generatory mają wbudowaną implementację metod `next()` i `[Symbol.iterator]()`.  Programista musi tylko napisać kod realizujący działanie pętli.  Zaimplementujmy zatem generator `randomRange` zwracający losowe liczby z określonego zakresu (analogicznie do [iteratora z poprzedniego rozdziału](/iterators-and-for-of.md)).
 
 ##### Przykład 9.2
 ```js
@@ -86,9 +86,9 @@ Jak widać implementacja krótsza i sprowadza się jedynie do określenia tego c
 
 ### Sterowanie generatorem
 
-* [`Generator.prototype.next`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/next) podobnie jak iterator, zwraca obiekt z wartościami  `done`oraz `value`. Metoda `next` pozwala także na przekazanie wartości do generatora.
+* [`Generator.prototype.next()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/next) podobnie jak iterator, zwraca obiekt z wartościami  `done`oraz `value`. Metoda `next` pozwala także na przekazanie wartości do generatora.
 
-* `Generator.prototype.return`  pozwala na zatrzymanie działania generatora, z opcjonalnie przekazaną wartością.
+* `Generator.prototype.return()`  pozwala na zatrzymanie działania generatora, z opcjonalnie przekazaną wartością.
 
 ##### Przykład 9.3
 ```js
@@ -112,7 +112,7 @@ console.log(gen.next());
 // -> Object {value: undefined, done: true}
 ```
 
-* `Generator.prototype.throw` pozwala na zatrzymanie działania generatora poprzez rzucenie wyjątku.
+* `Generator.prototype.throw()` pozwala na zatrzymanie działania generatora poprzez rzucenie wyjątku.
 
 ##### Przykład 9.4
 ```js
