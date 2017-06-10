@@ -22,7 +22,7 @@ _**Kluczową różnicą pomiędzy zwykłymi funkcjami a generatorami jest to, ż
 
 ### Uruchamiamy generator
 
-##### Przykład 9.1
+##### [Przykład 9.1](https://codepen.io/mmotel/pen/JJXPbM)
 ```js
 let gen = sampleGenerator();
 console.log(gen.next()); 
@@ -69,7 +69,7 @@ Po ostatnim wywołaniu metody `gen.next()` generator dobiega końca, dlatego w p
 
 Powtórzmy jeszcze raz: generatory są [iteratorami](/iterators-and-for-of.md). Wszystkie generatory mają wbudowaną implementację metod `next()` i `[Symbol.iterator]()`.  Programista musi tylko napisać kod realizujący działanie pętli.  Zaimplementujmy zatem generator `randomRange` zwracający losowe liczby z określonego zakresu (analogicznie do [iteratora z poprzedniego rozdziału](/iterators-and-for-of.md)).
 
-##### Przykład 9.2
+##### [Przykład 9.2](https://codepen.io/mmotel/pen/jwqNyb)
 ```js
 function* randomRange(items = 1, from = 0, to = 10) {
     for (let i = 0; i < items; i++) {
@@ -90,7 +90,7 @@ Jak widać implementacja krótsza i sprowadza się jedynie do określenia tego c
 
 * `Generator.prototype.return()`  pozwala na zatrzymanie działania generatora, z opcjonalnie przekazaną wartością.
 
-##### Przykład 9.3
+##### [Przykład 9.3](https://codepen.io/mmotel/pen/zzqONz)
 ```js
 function* sampleGenerator() {
     yield 1;
@@ -114,7 +114,7 @@ console.log(gen.next());
 
 * `Generator.prototype.throw()` pozwala na zatrzymanie działania generatora poprzez rzucenie wyjątku.
 
-##### Przykład 9.4
+##### [Przykład 9.4](https://codepen.io/mmotel/pen/WOwepb)
 ```js
 function* sampleGenerator() {
     try {
