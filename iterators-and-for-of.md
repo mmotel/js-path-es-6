@@ -101,6 +101,8 @@ Obiekt iteratora może również implementować opcjonalne metody `return` i `th
 2. ukrywanie implementacji,
 3. iterowanie po wybranych właściwościach obiektu.
 
+
+##### Przykład 8.6
 ```js
 const randomRange = (items = 1, from = 0, to = 10) => ({
     [Symbol.iterator]: () => {
@@ -128,6 +130,7 @@ for (let n of randomRange(10)) {
 }
 ```
 
+##### Przykład 8.7
 ```js
 class Words {
     constructor(str) {
@@ -140,15 +143,21 @@ class Words {
             return {
                 next: () => {
                     const match = re.exec(str);
-                    return match ? { value: match[0], done: false } : { value: undefined, done: true }
+                    return {
+                        value: match ? match[0] : undefined,
+                        done: !match
+                    }
                 }
             }
         }
+        
     }
 }
 
 
-const lipsum = new Words("Kopczyński i podług biegu rzeczy niemożemy miary szczęśliwości lub czynnym, lecz i jako przyboczny wynik, gdy pierwej był w pojecie o tym świecie.");
+const lipsum = new Words(`Lorem ipsum dolor sit amet, 
+consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua.`);
 
 for (let word of lipsum) {
     console.log(word);
@@ -157,7 +166,7 @@ for (let word of lipsum) {
 
 ### Ćwiczenie
 
-(8.1) Zaimplementować klasę `OverNameIterate()`   w konstruktorze przyjmującą kolekcję  obiektów. Klasa musi implementować iterator, pozwalający na wypisywanie z kolejnych obiektów własności `name`.
+(8.1) Zaimplementować klasę `OverNameIterate` przyjmującą w konstruktorze  kolekcję  obiektów. Klasa musi implementować iterator, pozwalający na wypisywanie z kolejnych obiektów własności `name`.
 
 ```js
 let sampleCollection = [
