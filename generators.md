@@ -67,7 +67,7 @@ Po ostatnim wywołaniu metody `gen.next` generator dobiega końca, dlatego w pol
 
 ## Generatory są iteratorami
 
-Powtórzmy jeszcze raz: Generatory są [iteratorami](/iterators-and-for-of.md). Wszystkie generatory mają wbudowaną implementację metod `next` i `[Symbol.iterator]`.  Programista musi tylko napisać kod realizujący działanie pętli.  Zaimplementujmy zatem generator `randomRange` zwracający losowe liczby z określonego zakresu (analogicznie do [iteratora z poprzedniego rozdziału](/iterators-and-for-of.md)).
+Powtórzmy jeszcze raz: generatory są [iteratorami](/iterators-and-for-of.md). Wszystkie generatory mają wbudowaną implementację metod `next` i `[Symbol.iterator]`.  Programista musi tylko napisać kod realizujący działanie pętli.  Zaimplementujmy zatem generator `randomRange` zwracający losowe liczby z określonego zakresu (analogicznie do [iteratora z poprzedniego rozdziału](/iterators-and-for-of.md)).
 
 ##### Przykład 9.2
 ```js
