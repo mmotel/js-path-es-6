@@ -20,6 +20,8 @@ export function greet (name, age) {
 }
 ```
 
+**Uwaga**: Słowo kluczowe `export` musi znajdować się na najwyższym poziomie kodu, nie może być zagnieżdżone w bloku lub funckji.
+
 #### Korzystanie z modułów
 
 Aby wykorzystać elementy modułu musimy je zaimportować.
@@ -30,6 +32,8 @@ import { A, B, greet } from 'our-module.js';
 greet('John Doe', A + B);
 // -> 'Hello! My name is John Doe and I am 30 years old.'
 ```
+
+**Uwaga**: Słowo kluczowe `import`, podobnie jak `export`, musi znajdować się na najwyższym poziomie kodu, nie może być zagnieżdżone w bloku lub funckji.
 
 Możemy także w łatwy sposób zaimportować wszystkie elementy modułu.
 
@@ -72,7 +76,16 @@ export * from 'module-1.js';
 export * from 'module-2.js';
 ```
 
-#### [Przykłady z wykorzystaniem BabelJS](https://github.com/mmotel/es6-modules-demo) 
+#### [Przykład 11.1 z wykorzystaniem BabelJS](https://github.com/mmotel/es6-modules-demo) 
+
+
+### Problemy z modułami
+
+Obecnie moduły nie są jeszcze wspierane we wszystkich przeglądarkach. Nie jest to jednak największy problem korzystania z modułów. 
+
+Każdy import powoduje wykonanie zapytania o plik zawierający moduł. Kiedy mamy wiele modułów, które mają wiele zależności ilość zapytań może radykalnie wydłużyć czas ładowania się aplikacji. 
+
+Czy zatem powinniśmy dzielić nasze aplikacji na moduły? Jak najbardziej, dzięki wykorzystaniu narzędzi takich jak [`Webpack`](https://webpack.js.org) możemy spakować naszą podzieloną na moduły aplikację i załadować ją jednym zapytaniem. Jest to możliwe ponieważ system modułów ES6 jest statyczny - wymaga umieszczenia importów oraz eksoprtów na najwyższym poziomie kodu. Wszystkie zależności mogą zostać rozwiązane na etapie "kompilacji" i być spakowane do jednego pliku.
 
 ---
 
