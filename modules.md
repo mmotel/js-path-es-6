@@ -2,7 +2,9 @@
 
 Obecnie JavaScript to już nie tylko pojedyńcze skrypty. Dzisiaj tworzymy rozbudowane aplikacje, które siłą rzeczy dzielimy na moduły aby pogrupować nasz kod logicznie oraz funkcyjnie. 
 
-Istnieje już kilka systemów modułów w JavaScript, np. `AMD`, `SystemJS` czy też `RequireJS`. Po co więc system modułów w ES6? Głównie po to aby ustandaryzować sposób definiowania  i wykorzystywania modułów oraz dadać kilka funkcjonalności znanych z innym języków. 
+Istnieje już kilka systemów i narzędzi do obsługi modułów w JavaScript, np. `AMD`, `SystemJS` czy też `RequireJS`. 
+
+Po co więc system modułów w ES6? Głównie po to aby ustandaryzować sposób definiowania  i wykorzystywania modułów oraz dadać kilka funkcjonalności znanych z innym języków. 
 
 #### Definiowanie modułów
 
