@@ -86,7 +86,7 @@ console.log(bazFromFoo); // -> 'baz'
 
 Składnia ES6 ponownie ułatwia nam pracę.
 
-##### Przykład 5.8
+##### [Przykład 5.8](https://codepen.io/mmotel/pen/vZLwJv)
 ```js
 let foo = { 
     bar: 'bar',
@@ -101,7 +101,7 @@ console.log(bazFromFoo); // -> 'baz'
 
 Jeśli nazwa pola obiektu oraz zmiennej, do której chcemy przypisać jego wartość są takie same możemy użyć uproszczonej składni.
 
-##### Przykład 5.9
+##### [Przykład 5.9](https://codepen.io/mmotel/pen/weMbrv)
 ```js
 let foo = { 
     bar: 'bar',
@@ -116,7 +116,7 @@ console.log(baz); // -> 'baz'
 
 Podobnie jak w przypadku tablic, również podczas destrukturyzacji obiektów, przyspianie do zmiennej pola, którego nie ma w obiekcie, spowoduje zwrócenie wartości `undefined`.
 
-##### Przykład 5.10
+##### [Przykład 5.10](https://codepen.io/mmotel/pen/jwWoGq)
 ```js
 let { foo } = {}
 
@@ -125,7 +125,7 @@ console.log(foo); // -> undefined
 
 Gdy destrukturyzujemy obiekt możemy wykorzystać parametry domyślne.
 
-##### Przykład 5.11
+##### [Przykład 5.11](https://codepen.io/mmotel/pen/eRJaGW)
 ```js
 let { foo = 'bar' } = {}
 
@@ -134,11 +134,19 @@ console.log(foo); // -> 'bar'
 
 Szczególnie przydatne jest to podczas pisania funkcji, które przyjmują jako parametr obiekt i nie wymagają podawania wszystkich jego własności.
 
-##### Przykład 5.12
+##### [Przykład 5.12](https://codepen.io/mmotel/pen/eRJaGW)
 ```js
-function foo ({first, second, third}) {}
+function foo ({first, second, third}) {
+  console.log(first, second, third);
+}
 
-function bar ({first=1, second=2, third=3}) {}
+function bar ({first=1, second=2, third=3}) {
+  console.log(first, second, third);
+}
+
+foo({third: 4}); // -> undefined • undefined • 4
+
+bar({third: 4}); // -> 1 • 2 • 4
 ```
 
 Również w przypadku obiektów, możemy łączyć i zagnieżdżać wyrażenia destrukturyzujące.
