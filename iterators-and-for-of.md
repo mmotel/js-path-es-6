@@ -6,26 +6,32 @@
 
 Iterowanie po tablicach klasycznym sposobem.
 
-##### Przykład 8.1
+##### [Przykład 8.1](https://codepen.io/mmotel/pen/QgNLWL)
 ```js
-let myArray = ['Alfa','Bravo','Charlie','Delta'];
+let myArray = ['Alfa', 'Bravo', 'Charlie', 'Delta'];
 
 for (let i = 0; i < myArray.length; i++) {
-    console.log(i);
-    console.log(myArray[i]);
+    console.log(i, myArray[i]);
 }
+// -> 1 • 'Alfa'
+// -> 2 • 'Bravo'
+// -> 3 • 'Charlie'
+// -> 4 • 'Delta'
 ```
 
 ### `for-in`
 
 Można także wykorzystać petlę `for-in` ale nie jest to zalecany sposób.
 
-##### Przykład 8.2
+##### [Przykład 8.2](https://codepen.io/mmotel/pen/PjNYoX)
 ```js
 for (let i in myArray) {
-    console.log(i);
-    console.log(myArray[i]);
+    console.log(i, myArray[i]);
 }
+// -> 1 • 'Alfa'
+// -> 2 • 'Bravo'
+// -> 3 • 'Charlie'
+// -> 4 • 'Delta'
 ```
 
 Index `i` będzie typu string.  Kolejność iteracji nie jest gwarantowana.  `for..in`  stworzono do iteracji po właściwościach obiektu.
@@ -34,12 +40,15 @@ Index `i` będzie typu string.  Kolejność iteracji nie jest gwarantowana.  `fo
 
 W ES5 możemy użyć metody  `Array.forEach()` do iterowania po tablicach.
 
-##### Przykład 8.3
+##### [Przykład 8.3](https://codepen.io/mmotel/pen/MoygYK)
 ```js
 myArray.forEach((element, index) => {
-    console.log(index);
-    console.log(element);
+    console.log(index, element);
 });
+// -> 1 • 'Alfa'
+// -> 2 • 'Bravo'
+// -> 3 • 'Charlie'
+// -> 4 • 'Delta'
 ```
 
 Pewnym problemem jest przerwanie takiej pętli. Nie ma zastosowania `break` . Ponadto:
@@ -54,9 +63,13 @@ Pętla `for-of` została stworzona do rozwiązania problemów pętli przedstawio
 ```js
 let myArray = ['Alfa', 'Bravo', 'Charlie', 'Delta'];
 
-for (let i of myArray) {
-    console.log(i);
+for (let item of myArray) {
+    console.log(item);
 }
+// -> 'Alfa'
+// -> 'Bravo'
+// -> 'Charlie'
+// -> 'Delta'
 ```
 
 * powyższe rozwiązanie stanowi najzwięźlejszą i najprostszą pętlę operującą na elementach tablic,
@@ -73,7 +86,7 @@ for (let i of myArray) {
 
 Obiekty z metodą `[Symbol.iterator]()` nazywamy obiektami iterowalnymi.  Stwórzmy najprostszy możliwy iterator (obiekt, który zawiera jedynie metodę iteratora).
 
-##### Przykład 8.5
+##### [Przykład 8.5](https://codepen.io/mmotel/pen/NgNKPZ)
 ```js
 let timestampForeverIterator = {
     [Symbol.iterator]: () => ({
@@ -102,23 +115,19 @@ Obiekt iteratora może również implementować opcjonalne metody `return` i `th
 3. iterowanie po wybranych właściwościach obiektu.
 
 
-##### Przykład 8.6
+##### [Przykład 8.6](https://codepen.io/mmotel/pen/YQqKXv)
 ```js
 const randomRange = (items = 1, from = 0, to = 10) => ({
     [Symbol.iterator]: () => {
         let currentItemCounter = 0;
         return {
-            next() {
-                if (currentItemCounter === items) {
-                    return {
-                        done: true
-                    }
-                }
-                ++currentItemCounter;
-                return {
-                    done: false,
-                    value: from + Math.floor(Math.random() * to) + 1
-                }
+            next: () => {
+              let done = currentItemCounter++ === items;
+              let value = from + Math.floor(Math.random() * to) + 1;
+              return {
+                done: done,
+                value: done ? undefined : value
+              }
             }
         }
     }
@@ -130,7 +139,7 @@ for (let n of randomRange(10)) {
 }
 ```
 
-##### Przykład 8.7
+##### [Przykład 8.7](https://codepen.io/mmotel/pen/XgdrdM)
 ```js
 class Words {
     constructor(str) {
@@ -162,6 +171,12 @@ incididunt ut labore et dolore magna aliqua.`);
 for (let word of lipsum) {
     console.log(word);
 }
+// -> Lorem 
+// -> ipsum 
+// -> dolor 
+// -> sit 
+// -> amet,
+// ...
 ```
 
 ### Ćwiczenie
