@@ -14,5 +14,5 @@
 * [10. Kolekcje](collections.md)
 * [11. Moduły](modules.md)
 * [12. Transpilatory ES6](transpilers.md)
-* [13. Przyszłość / ES7](future-es7.md)
+* [13. Przyszłość](future-es7.md)
 
