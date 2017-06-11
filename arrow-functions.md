@@ -42,11 +42,20 @@ Jednak nie zawsze chcemy lub możemy wykonać wszystko w jednym wyrażeniu. Aby 
 
 Jeśli zdefiniujemy ciało _strzałki_ nie zwraca już ona domyślnie swojej wartości - musimy użyć jawnie słowa kluczowego `return`.
 
+Jak zatem zwrócić obiekt a nie definiować ciało funkcji? Same klamry obiektu zostaną zinterpretowane jako ciało funkcji. Jednak jeśli otoczymy je nawiasami `()` to będziemy mogli zwrócić obiekt.
+
+##### Przykład 4.4
+```js
+  (a) => ({
+    value: a
+  })
+``` 
+
 ### `this`
 
 Subtelną ale bardzo ważną rożnicą pomiędzy zwykłą funkcją a _strzałką_ jest wiązanie wartości `this`.
 
-##### [Przykład 4.4](https://codepen.io/mmotel/pen/mwVQmV)
+##### [Przykład 4.5](https://codepen.io/mmotel/pen/mwVQmV)
 
 ```js
 class Foo {
@@ -65,7 +74,7 @@ W powyższym przykładzie wewnątrz `function` wartość `this` będzie równa `
 
 Rozwiązaniem jest zasotoswanie funkcji strzałkowej.
 
-##### [Przykład 4.5](https://codepen.io/mmotel/pen/zzrMzy)
+##### [Przykład 4.6](https://codepen.io/mmotel/pen/zzrMzy)
 
 ```js
 class Foo {
