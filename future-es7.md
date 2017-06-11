@@ -104,9 +104,9 @@ class Person {
 }
 ```
 
-### Opcjonalne anotacje typów
+### Opcjonalne adnotacje typów
 
-Będziemy mogli wykorzystywać anotacje typów znane z [`Flow`](https://flow.org) lub te z języka [`TypeScirpt`](http://www.typescriptlang.org).
+Będziemy mogli wykorzystywać adnotacje typów znane z [`Flow`](https://flow.org) lub te z języka [`TypeScirpt`](http://www.typescriptlang.org).
 
 ```js
 function square (a: number, b: number): number {
