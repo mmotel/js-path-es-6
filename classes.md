@@ -66,7 +66,7 @@ let ourCar = new Car('V8');
 
 Metody definiujemy podobnie jak konstruktor.
 
-##### Przykład 2.4
+##### [Przykład 2.4](https://codepen.io/mmotel/pen/MoWQGx)
 ```js
 class Car {
     
@@ -90,7 +90,7 @@ console.log(ourCar.drive(120));
 
 Definiowanie własności obiektu jest równie proste jak w przypadku metod. Wykorzystujemy do tego słowa kluczowe `set` i `get`.
 
-##### Przykład 2.5
+##### [Przykład 2.5](https://codepen.io/mmotel/pen/XgdgjY)
 ```js
 class Car {
     
