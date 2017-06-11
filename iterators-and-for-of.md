@@ -59,7 +59,7 @@ Pewnym problemem jest przerwanie takiej pętli. Nie ma zastosowania `break` . Po
 
 Pętla `for-of` została stworzona do rozwiązania problemów pętli przedstawionych powyżej. Pozwala iterować po wielu typach danych  (`Array`, `String`, `TypedArray`, `Map`, `Set`, `DOMCollection`, `Iterators`, `Generators`), nie powielając problemów wyżej przedstawionych rozwiązań.
 
-##### Przykład 8.4
+##### [Przykład 8.4](https://codepen.io/mmotel/pen/JJXPoy)
 ```js
 let myArray = ['Alfa', 'Bravo', 'Charlie', 'Delta'];
 
