@@ -86,7 +86,7 @@ Jak widać implementacja krótsza i sprowadza się jedynie do określenia tego c
 
 ### Sterowanie generatorem
 
-* [`Generator.prototype.next()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/next) podobnie jak iterator, zwraca obiekt z wartościami  `done`oraz `value`. Metoda `next` pozwala także na przekazanie wartości do generatora.
+* [`Generator.prototype.next()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/next) podobnie jak iterator, zwraca obiekt z wartościami  `done`oraz `value`. Metoda `next()` pozwala także na przekazanie wartości do generatora.
 
 * `Generator.prototype.return()`  pozwala na zatrzymanie działania generatora, z opcjonalnie przekazaną wartością.
 
@@ -161,6 +161,7 @@ console.log(gen.next());
 * [https://davidwalsh.name/es6-generators](https://davidwalsh.name/es6-generators)
 * [http://mrzepinski.pl/es6-generators.html](http://mrzepinski.pl/es6-generators.html)
 * [http://shebang.pl/artykuly/es6-bez-tajemnic-generatory/](http://shebang.pl/artykuly/es6-bez-tajemnic-generatory/)
+* [http://shebang.pl/artykuly/generatory-ciag-dalszy/](http://shebang.pl/artykuly/generatory-ciag-dalszy/)
 
 
 
