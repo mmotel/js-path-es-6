@@ -6,7 +6,7 @@ Komisja _ ECMA CT39_ planuje wydawać kolejne wersje standardu _ECMAScript_ co o
 
 ### `ES7`
 
-Standard _ECMAScript 7_, znany też jako _ES2016_, został opublikowany w Czerwcu 2017. 
+Standard _ECMAScript 7_, znany też jako _ES2016_, został opublikowany w Czerwcu 2016. 
 
 `ES7` dodaje do standardu dwa nowe elementy: metodę `Array.prototype.includes()` oraz operator potęgowania `**`.
 
