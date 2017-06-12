@@ -31,7 +31,7 @@ var name = 'John Doe';
 
 function greet (name) {
     if (name === undefined) { name = 'Jane Doe'; };
-    return `My name is ' + name + '.';
+    return 'My name is ' + name + '.';
 }
 
 console.log(greet(name)); // -> 'My name is John Doe.'
