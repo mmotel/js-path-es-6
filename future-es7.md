@@ -14,7 +14,7 @@ Standard _ECMAScript 7_, znany też jako _ES2016_, został opublikowany w Czerwc
 
 Niebawem ukaże się standard _ECMAScript 8_ - `ES2017`. 
 
-`ES8` dodaje jedną znaczącą funkcjonalność: funckje `async/await`.
+`ES8` dodaje jedną znaczącą funkcjonalność: funkcje `async/await`.
 
 ### `ES.Next`
 
