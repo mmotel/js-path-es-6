@@ -185,7 +185,7 @@ console.log(Car.carsMade); // -> 2
 
 Jak każdy język obiektowy, JavaScript pozwala na dziedziczenie klas. W ES5 nie jest to jednak łatwe zadanie.
 
-##### [Przykład 2.8](https://codepen.io/mmotel/pen/MoWQGx)
+##### [Przykład 2.8](https://codepen.io/mmotel/pen/QgNXQg)
 ```js
 Car = (function () {
   function Car (engine) {
