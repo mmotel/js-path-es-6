@@ -81,7 +81,7 @@ let allArrays2 = concatAll2([1, 2], [3, 4], [5, 6], [7, 8]);
 console.log(allArrays2);// -> [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
-Specjalna składnia `...arrays` mówi nam, że funkcja przyjmuje dowolną ilość parametrów. Dodatkowo parametr `arrays` jest tablicą, która zamiera wszystkie parametry znajdujące się po `array2`. Jeśli ich nie ma `arrays` będzie pustą tablicą - nigdy nie będzie to `undefined`. 
+Specjalna składnia `...arrays` mówi nam, że funkcja przyjmuje dowolną ilość parametrów. Dodatkowo parametr `arrays` jest tablicą, która zawiera wszystkie parametry znajdujące się po `array2`. Jeśli ich nie ma `arrays` będzie pustą tablicą - nigdy nie będzie to `undefined`. 
 
 _**UWAGA**_: Funkcja może zawierać tylko jeden parametr resztowy i musi on znajdować się na końcu listy parametrów.
 
