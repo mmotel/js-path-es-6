@@ -125,7 +125,7 @@ console.log(foo); // -> undefined
 
 Gdy destrukturyzujemy obiekt możemy wykorzystać parametry domyślne.
 
-##### [Przykład 5.11](https://codepen.io/mmotel/pen/eRJaGW)
+##### [Przykład 5.11](https://codepen.io/mmotel/pen/yXbyrX)
 ```js
 let { foo = 'bar' } = {}
 
