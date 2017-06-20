@@ -87,7 +87,7 @@ Obecnie moduły nie są jeszcze wspierane we wszystkich przeglądarkach. Nie jes
 
 Każdy import powoduje wykonanie zapytania o plik zawierający moduł. Kiedy mamy wiele modułów, które mają wiele zależności ilość zapytań może radykalnie wydłużyć czas ładowania się aplikacji. 
 
-Czy zatem powinniśmy dzielić nasze aplikacji na moduły? Jak najbardziej, dzięki wykorzystaniu narzędzi takich jak [`Webpack`](https://webpack.js.org) możemy spakować naszą podzieloną na moduły aplikację i załadować ją jednym zapytaniem. Jest to możliwe ponieważ system modułów ES6 jest statyczny - wymaga umieszczenia importów oraz eksoprtów na najwyższym poziomie kodu. Wszystkie zależności mogą zostać rozwiązane na etapie "kompilacji" i być spakowane do jednego pliku.
+Czy zatem powinniśmy dzielić nasze aplikacji na moduły? Jak najbardziej, dzięki wykorzystaniu narzędzi takich jak [`Webpack`](https://webpack.js.org) możemy spakować naszą podzieloną na moduły aplikację i załadować ją jednym zapytaniem. Jest to możliwe ponieważ system modułów ES6 jest statyczny - wymaga umieszczenia importów oraz eksportów na najwyższym poziomie kodu. Wszystkie zależności mogą zostać rozwiązane na etapie "kompilacji" i być spakowane do jednego pliku.
 
 ---
 
