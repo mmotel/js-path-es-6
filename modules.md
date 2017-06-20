@@ -22,7 +22,7 @@ export function greet (name, age) {
 }
 ```
 
-**Uwaga**: Słowo kluczowe `export` musi znajdować się na najwyższym poziomie kodu, nie może być zagnieżdżone w bloku lub funckji.
+**Uwaga**: Słowo kluczowe `export` musi znajdować się na najwyższym poziomie kodu, nie może być zagnieżdżone w bloku lub funkcji.
 
 #### Korzystanie z modułów
 
@@ -35,7 +35,7 @@ greet('John Doe', A + B);
 // -> 'Hello! My name is John Doe and I am 30 years old.'
 ```
 
-**Uwaga**: Słowo kluczowe `import`, podobnie jak `export`, musi znajdować się na najwyższym poziomie kodu, nie może być zagnieżdżone w bloku lub funckji.
+**Uwaga**: Słowo kluczowe `import`, podobnie jak `export`, musi znajdować się na najwyższym poziomie kodu, nie może być zagnieżdżone w bloku lub funkcji.
 
 Możemy także w łatwy sposób zaimportować wszystkie elementy modułu.
 
