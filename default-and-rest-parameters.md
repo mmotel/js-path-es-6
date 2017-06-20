@@ -25,8 +25,6 @@ function square2 (a=0) {
 
 Ważną cechą parametrów domyślnych jest moment ich ewaluacji. W przeciwieństwie do języków takich ja `Pyhton`, ich wartość jest ustalana w momencie wykonywania funkcji, a nie w momencie jej definiowania.
 
-**_UWAGA_**: Po parametrze posiadającym wartość domyślną nie mogą występować parametry bez niej.
-
 ##### [Przykład 4.2](https://codepen.io/mmotel/pen/MoKzeV)
 ```js
 class CoolDate {
@@ -36,7 +34,7 @@ class CoolDate {
 }
 ```
 
-**_UWAGA_**: Po parametrze posiadającym wartość domyślną nie mogą występować parametry bez niej.
+**_UWAGA_**: Po parametrze posiadającym wartość domyślną nie powinny występować parametry bez niej.
 
 ## Parametry resztowe
 
